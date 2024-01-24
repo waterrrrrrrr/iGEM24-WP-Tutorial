@@ -17,7 +17,9 @@
 
 - HTML and all sort of source code MUST be committed to the Team Wiki repository on GitHub Repo
 
-- iframes are NOT allowed
+- `iframes` are NOT allowed
+
+- On every page, teams must add a clear and visible link to the team GitHub Repo
 
 ## 2 Relevant Info
 
@@ -25,17 +27,26 @@
 
 - These are URLs for all the Wikis created by ZJU-China:
     > You can visit other team's Wiki by modifiying the LAST part of the URL
-    - https://2023.igem.wiki/zju-china/
-    - https://2022.igem.wiki/zju-china/
-    - https://2021.igem.org/Team:ZJU-China
-    - https://2020.igem.org/Team:ZJU-China
-    - https://2019.igem.org/Team:ZJU-China
-    - https://2018.igem.org/Team:ZJU-China
-    - http://2017.igem.org/Team:ZJU-China
-    - http://2016.igem.org/Team:ZJU-China
-    - http://2015.igem.org/Team:ZJU-China
-    - http://2014.igem.org/Team:ZJU-China
-    - http://2013.igem.org/Team:ZJU-China
+    - 2023: <a href="https://2023.igem.wiki/zju-china" target="_blank">Flora Sentinel</a>
+    - 2022: <a href="https://2022.igem.wiki/zju-china" target="_blank">StoryLight</a>
+    - 2021: <a href="https://2021.igem.org/Team:ZJU-China" target="_blank">ViruGuard</a>
+    - 2020: <a href="https://2020.igem.org/Team:ZJU-China" target="_blank">MagHER2some</a>
+    - 2019: <a href="https://2019.igem.org/Team:ZJU-China" target="_blank">PaDetector</a>
+    - 2018: <a href="https://2018.igem.org/Team:ZJU-China" target="_blank">A Detector</a>
+    - 2017: <a href="https://2017.igem.org/Team:ZJU-China" target="_blank">The Guardian Trichoderma</a>
+    - 2016: <a href="https://2016.igem.org/Team:ZJU-China" target="_blank">Enigma</a>
+    - 2015: <a href="https://2015.igem.org/Team:ZJU-China" target="_blank">Terminator</a>
+    - 2014: <a href="https://2014.igem.org/Team:ZJU-China" target="_blank">GeneSocket</a>
+    - 2013: <a href="https://2013.igem.org/Team:ZJU-China" target="_blank">The Ghost Kit</a>
+    - 2012: <a href="https://2012.igem.org/Team:ZJU-China" target="_blank">RNA Scaffold</a>
+    - 2011: <a href="https://2011.igem.org/Team:ZJU-China" target="_blank">Rainbofilm</a>
+    - 2010: <a href="https://2010.igem.org/Team:ZJU-China" target="_blank">Bach</a>
+
+- Best Wiki (Nominations) for recent years
+  
+  - [2023 Grand Jamboree](https://jamboree.igem.org/2023/results?scroll=Best%20Wiki#special-prizes)
+  - [2022 Grand Jamboree](https://jamboree.igem.org/2022/results?scroll=Best%20Wiki#special-prizes)
+  - [2021 Grand Jamboree](https://jamboree.igem.org/2021/results?scroll=Best%20Wiki#special-prizes)
 
 - [Tutorial](https://gitee.com/igem_ucas_china/2024-drylab-tutorial/tree/master) by UCAS-China (Not Required)
 
