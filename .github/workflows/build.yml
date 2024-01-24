@@ -1,0 +1,25 @@
+name: Deploy GitPages
+
+# only update when PUSH@main
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runse-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Sync Newest
+        uses: actions/checkout@v2
+      - name: Install Dependencies
+        run: pip install --no-cache-dir -r dependencies.txt
+      - name: Build
+        run: python freezer.py
+      - name: Deploy to GitPages
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with: 
+          branch: gh-pages
+          folder: public
