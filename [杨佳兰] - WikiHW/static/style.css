@@ -1,0 +1,153 @@
+.pagebody img{
+    height: 90vh;
+}
+
+.pagebody .homeimg{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.pagebody .homeimg>img{
+    position: absolute;
+}
+.pagebody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    z-index: 1;
+}
+#titleimg{
+    z-index: 4;
+    opacity: 0;
+    animation: floatin 2s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+.footprint{
+    width: 60px;
+    position: absolute;
+    animation: fadein 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    z-index: 10;
+}
+.invisiblefoot{
+    width: 60px;
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+}
+.visiblefoot{
+    width: 60px;
+    position: absolute;
+    z-index: 10;
+}
+.visiblefootplus{
+    width: 60px;
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+    animation: fadein 1s;
+    animation-fill-mode: forwards;
+}
+.hintfoot{
+    width: 60px;
+    position: absolute;
+    opacity: 0;
+    z-index: 10;
+    animation: twinkle 2s infinite;
+}
+@keyframes twinkle {
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* loading effect */
+  body {
+    margin: 0;
+  }
+  
+  .loader {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    margin-left: 10%;
+    transform: translate3d(-50%,-50%,0);
+  }
+  
+  .dot {
+    width: 24px;
+    height: 24px;
+    background: #578862;
+    border-radius: 100%;
+    display: inline-block;
+    animation: slide 1s infinite;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.3;
+      transform: scale(2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes floatin {
+    0% {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(5%);
+    }
+}
+
+/* to be done */
+@media all and (max-width:700px){
+    .pagebody .homeimg img{
+        width: 100vw;
+        height: fit-content;
+    }
+    .footbox .invisiblefoot .footprint .visiblefoot .visiblefootplus .hintfoot{
+        animation: none;
+        display: none;
+        opacity: 0;
+    }
+    #titleimg{
+        animation: none;
+        opacity: 1;
+    }
+}
+

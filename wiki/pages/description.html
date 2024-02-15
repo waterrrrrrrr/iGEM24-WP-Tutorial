@@ -1,57 +1,81 @@
 {% extends "layout.html" %}
   
-{% block title %}Project Description{% endblock %}
-{% block lead %}Describe how and why you chose your iGEM project.{% endblock %}
+{% block title %}Description{% endblock %}
+<!-- {% block lead %}Describe how and why you chose your iGEM project.{% endblock %} -->
 
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Bronze Medal Criterion #3</h4>
-      <p>Describe how and why you chose your iGEM project.<p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2023 Medals Page</a> for more information.</p>
+<!-- CSS -->
+<link href="{{ url_for('static', filename = 'description.css')}}" rel="stylesheet">
+
+<!-- Main Part -->
+<div class="cont-title-box">
+  <img src="../../static/svgs/cont-title.svg" alt="content's title" class="cont-title">
+</div>
+<div class="pagebody">
+  <div class="menubox">
+    <div class="title0">{{ self.title() }}</div>
+    <div class="title1"><a href="#p1">- Background</a></div>
+    <div class="title1"><a href="#p2">- Project Design</a></div>
+    <div class="title1"><a href="#p3">- Theoretical Basis</a></div>
+    <div class="title1"><a href="#p4">- Related Cases</a></div>
+    <div class="title1"><a href="#p5">- Quotes</a></div>
+  </div>
+  <div class="contentbox">
+    <div class="s1">
+      <a name="p1" style="position: relative; top: -14vh;"></a>
+      <h2>Background
+        <img src="../../static/svgs/title's logo.svg" alt=" " class="titlelogo">
+      </h2>
+      <p>
+        In the past three decades, cardiovascular disease has been the main cause of death in the world. 
+        Especially due to the aging population, the number of deaths from <strong>cardiovascular diseases</strong> cardiovascular diseases in the world is increasing.
+      </p>
+      <div class="img-wrap">
+        <img src="../../static/svgs/des1.svg" alt="cardiovascular diseases">
+      </div>
+      <p>
+        According to the <strong>WORLDHEARTREPORT2023</strong> released by the World Heart Federation (WHF), 20.5 million people died of cardiovascular diseases in 2021, 
+        accounting for about one third of the total number of deaths worldwide.
+      </p>
+      <div class="img-wrap">
+        <img src="../../static/svgs/des2.svg" alt="number of CVD deaths">
+      </div>
+      <p>
+        Heart disease is the main type of cardiovascular disease. Heart disease can be divided into congenital heart disease (congenital malformation) and acquired heart disease. Among them, acquired heart disease accounts for the majority, such as coronary heart disease, rheumatic heart disease, hypertensive heart disease, cardiomyopathy, sick sinus syndrome and so on, which causes atrial fibrillation, heart failure and other symptoms.
+      </p>
+      <p>
+        At present, the diagnosis of heart disease is mainly based on clinical symptoms (such as chest pain, dyspnea, etc.), physical examination (heart murmur, hypertension, etc.) and electrocardiogram (ECG). However, these methods have some shortcomings, such as low timeliness (usually the results can only be diagnosed when the disease is serious), complicated operation, need of professionals and long-term monitoring alone.
+      </p>
+      <p>
+        Therefore, we need to find a more rapid and convenient detection method.
+      </p>
+
+      <a name="p2" style="position: relative; top: -14vh;"></a>
+      <h2>Project Design
+        <img src="../../static/svgs/title's logo.svg" alt=" " class="titlelogo">
+      </h2>
+      <p>
+        Members of WP-G1 found that various RNAs and proteins can be used as target molecules to mark some heart diseases.
+      </p>
+      <p>此处有张表</p>
+      <p>
+        We want to mass-produce aptamer molecules for target detection by synthetic biology, and develop an electric sensing rapid diagnostic instrument based on nucleic acid, protein and other biological targets related to heart diseases, so as to realize rapid and convenient detection of heart diseases.
+      </p>
+      <p>
+        This is our project - Telepathy, which is a microfluidic biochip, packaged in the form of a test paper. It only needs a drop of blood to complete the diagnosis, and outputs an electrical signal through Bluetooth, showing the risk of illness and the types of diseases on your mobile phone. The whole diagnosis process is non-invasive and very fast, and it can screen a large number of people for heart diseases in a short time.
+      </p>
+      <p>
+        We believe that the study of aptamers for disease detection will be one of the hot spots in the future biomedical field. We hope to use Telepathy to guide the early screening of human heart diseases, and use it as a model to develop a new detection system for screening many diseases that are not limited to heart diseases.
+      </p>
+      <p>
+        We hope our project can contribute to disease diagnosis and world public health!
+      </p>
+      <p>
+        For more detailed information about the design, please click the link here.
+      </p>
     </div>
-  </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <ul>
-      <li>A clear and concise description of your project.</li>
-      <li>A detailed explanation of why your team chose to work on this particular project.</li>
-      <li>References and sources to document your research.</li>
-      <li>Use illustrations and other visual resources to explain your project.</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2022.igem.wiki/dtu-denmark/description">2022 DTU-Denmark</a></li>
-      <li><a href="https://2019.igem.org/Team:ITESO_Guadalajara/Description">2019 ITESO Guadalajara</a></li>
-      <li><a href="https://2020.igem.org/Team:Technion-Israel/Description">2020 Technion Israel</a></li>
-      <li><a href="https://2020.igem.org/Team:Botchan_Lab_Tokyo/Description">2020 Botchan Lab Tokyo</a></li>
-      <li><a href="https://2020.igem.org/Team:St_Andrews/Description">2020 St Andrews</a></li>
-      <li><a href="https://2020.igem.org/Team:MIT/Description">2020 MIT</a></li>
-    </ul>
-  </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Some advice</h2>
-    <hr>
-    <p>We encourage you to put up a lot of information and content on your wiki, but we also encourage you to include summaries as much as possible. If you think of the sections in your project description as the sections in a publication, you should try to be concise, accurate, and unambiguous in your achievements. Your Project Description should include more information than your project abstract.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>References</h2>
-    <hr>
-    <p>iGEM teams are encouraged to record references you use during the course of your research. They should be posted somewhere on your wiki so that judges and other visitors can see how you thought about your project and what works inspired you.</p>
-  </div>
-</div>
 
 {% endblock %}
