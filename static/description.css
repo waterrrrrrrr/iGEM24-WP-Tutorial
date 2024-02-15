@@ -1,0 +1,72 @@
+.cont-title{ width: 100% !important; }
+
+.pagebody{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* justify-content: flex-start; */
+    width: 100vw;
+    /* z-index: 1; */
+    /* flex:1; */
+    color: white;
+}
+
+.menubox{
+    /* background-color: antiquewhite; */
+    margin-left: 7vw;
+    /* top: -5vh; */
+    padding: 1vh 0 1vh 0;
+    width: 18vw;
+    position: relative;
+
+}
+.title0{
+    margin-bottom: 10%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+.title1 {
+    text-decoration: none;
+    font-size: 1.1rem;
+    line-height: 200%;
+}
+.menubox a:hover{
+    color: inherit;
+    font-weight: bold;
+    border-bottom: solid;
+}
+
+.contentbox{
+    background-color: #3B404A;
+    margin-left: 3vw;
+    width: 63vw;
+    padding: 0 3vw 2vw 3vw;
+    box-sizing: border-box; /* 让.padding的宽度包含在.contentbox的宽度中 */
+    border-radius: 10px;
+    position: relative;
+}
+.contentbox .s1 { width: 100%; }
+.contentbox .s1 h2 { font-size: 1.3rem; margin: 1.2em 0 1em 0; font-weight: bold;}
+.contentbox .s1 h2 .titlelogo { height: 1.5rem; margin-left: 0.1rem;}
+.contentbox .s1 p { font-size: 1rem; line-height: 170%; margin: 1.6rem 0 1.6rem 0;}
+
+strong{
+    color: #75BC8D;
+}
+
+@media all and (max-width:850px){
+    .menubox{
+        display: none;
+    }
+    .contentbox{
+        margin-left: 6% !important;
+        width: 85%;
+    }
+}
+
+.img-wrap img {
+    width: 100%; /* 使img元素宽度100%，考虑到.contentbox的padding */
+    margin: 1rem 0 1.5rem 0;
+}
