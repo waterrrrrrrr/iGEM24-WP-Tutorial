@@ -84,7 +84,7 @@ Make sure that:
 
 1. Fork this Repo
 
-2. Init Git Pages on branch `gh-pages`
+2. Init Git Pages on branch `gh-pages` [try to create gh-pages]
 
     进入 `Setting->Pages`，在 `Branch` 中选择 `gh-pages` & `/(root)` 并保存修改
 
