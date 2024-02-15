@@ -70,3 +70,8 @@ strong{
     width: 100%; /* 使img元素宽度100%，考虑到.contentbox的padding */
     margin: 1rem 0 1.5rem 0;
 }
+
+.table img{
+    width: 84%;
+    margin: 1rem 0 1rem 10%;
+}
