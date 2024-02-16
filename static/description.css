@@ -39,18 +39,38 @@
 }
 
 .contentbox{
-    background-color: #3B404A;
     margin-left: 3vw;
     width: 63vw;
-    padding: 0 3vw 2vw 3vw;
-    box-sizing: border-box; /* 让.padding的宽度包含在.contentbox的宽度中 */
-    border-radius: 10px;
-    position: relative;
+    /* box-sizing: border-box; 让.padding的宽度包含在.contentbox的宽度中 */
+    /* padding: 0;
+    margin-top: 0; */
+    /* position: relative; */
 }
-.contentbox .s1 { width: 100%; }
-.contentbox .s1 h2 { font-size: 1.3rem; margin: 1.2em 0 1em 0; font-weight: bold;}
+.part {
+    background-color: #3B404A;
+    padding: 2rem 2rem 1rem 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+/*content's h1*/
+.contentbox .s1 h2 { margin: 0 0 1em 0; font-weight: bold; 
+    display: flex; flex-direction: row;
+    align-items: flex-start;}
+.contentbox .s1 h2 .cont-h1 { font-size: 1.3rem; margin: 0.2rem 0 0 1rem; color: #75BC8D;}
 .contentbox .s1 h2 .titlelogo { height: 1.5rem; margin-left: 0.1rem;}
-.contentbox .s1 p { font-size: 1rem; line-height: 170%; margin: 1.6rem 0 1.6rem 0;}
+/*passage*/
+.contentbox .s1 .underh2 { font-size: 1rem; line-height: 170%; margin: 1.6rem 0 1.6rem 0;}
+
+/*content's h2*/
+.contentbox .s1 h3 { margin: 0.8em 0 0 0; font-weight: bold; 
+    display: flex; flex-direction: row;
+    align-items: flex-start;}
+.contentbox .s1 h3 .cont-h2 { font-size: 1.2rem; margin: 0 0 0 1rem; color: #53CAFC;}
+.contentbox .s1 h3 .subtitlelogo { margin: 0.3rem 0 0 1rem; height: 0.7rem;}
+/*passage*/
+.contentbox .s1 .underh3 { font-size: 1rem; line-height: 170%; margin: 1.6rem 0 1.6rem 2.4rem;}
+
 
 strong{
     color: #75BC8D;
@@ -61,17 +81,45 @@ strong{
         display: none;
     }
     .contentbox{
-        margin-left: 6% !important;
+        margin-left: 8% !important;
         width: 85%;
     }
 }
 
-.img-wrap img {
-    width: 100%; /* 使img元素宽度100%，考虑到.contentbox的padding */
-    margin: 1rem 0 1.5rem 0;
+
+.insertimg{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5rem 0 1rem 0;
 }
 
+.insertimg img {
+    width: 100%;
+}
+
+.img_descr{
+    color: #8A8A8A;
+    margin: 0.3rem;
+    font-size: small;
+}
+
+.hardw_img{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+.hardw_img img {
+    width: 80%;
+}
+
+.table{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
 .table img{
     width: 84%;
-    margin: 1rem 0 1rem 10%;
+    margin: 1rem 0 1rem 0;
 }
