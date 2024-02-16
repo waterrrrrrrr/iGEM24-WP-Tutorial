@@ -43,12 +43,14 @@ function scrollToShowImage() {
         }
     }
 
-    // if(document.documentElement.scrollTop > 342){
-    //     menubox.classList.add("menubox_pos"); /*添加样式*/
-    //     console.log("目录固定");
-    // }else{
-    //     menubox.classList.remove("menubox_pos"); /*删除样式*/
-    // }
+    if(document.documentElement.scrollTop > 342){
+        navbar.style.opacity = '1';
+
+        // menubox.classList.add("menubox_pos"); /*添加样式*/
+    }else{
+        // menubox.classList.remove("menubox_pos"); /*删除样式*/
+        navbar.style.opacity = '0.8';
+    }
 
     beforeScrollTop = scrollTop;
   }
