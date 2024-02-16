@@ -18,7 +18,7 @@
     <div class="title1"><a href="#p1">- Background</a></div>
     <div class="title1"><a href="#p2">- Project Design</a></div>
     <div class="title1"><a href="#p3">- Theoretical Basis</a></div>
-    <div class="title1"><a href="#p4">- Related Cases</a></div>
+    <div class="title1"><a href="#p4">- Procedure of using</a></div>
     <div class="title1"><a href="#p5">- Quotes</a></div>
   </div>
 
@@ -72,7 +72,7 @@
           Members of WP-G1 found that various RNAs and proteins can be used as target molecules to mark some heart diseases.
         </p>
         <div class="insertimg">
-          <img src="{{ url_for('static', filename = 'svgs/d3.JPEG')}}" alt=" ">
+          <img src="{{ url_for('static', filename = 'svgs/a1.png')}}" alt=" ">
           <div class="img_descr">
             Figure3: Biomarkers as predictors of recurrence after atrial fibrillation ablation [6]
           </div>
@@ -113,17 +113,18 @@
           <div class="cont-h2">Cause of targets' emergence</div>
         </h3>
         <p class="underh3">
-          Under normal circumstances, various substances in the human body are in a state of dynamic balance. However, when there are some problems with our body, such as heart disease, the concentration of some substances will change significantly. This is the basis of our project design.
+          Under normal circumstances, various substances in the human body are in a state of dynamic balance. However, when there are some problems with our body, <strong>such as heart disease, the concentration of some substances will change significantly. This is the basis of our project design</strong>.
         </p>
         <p class="underh3">
-          The synthesis and secretion of proteins are regulated in vivo, and when diseases occur, these physiological activities may be out of balance. Taking natriuretic peptide (BNP) as an example: the neuroendocrine system is activated in heart failure. At the same time, due to the increase of ventricular volume or pressure load, the tension of ventricular wall increases, which will increase the concentration of BNP in blood.[1]
+          <strong>The synthesis and secretion of proteins are regulated in vivo</strong>, and when diseases occur, these physiological activities may be out of balance. Taking natriuretic peptide (BNP) as an example: the neuroendocrine system is activated in heart failure. At the same time, due to the increase of ventricular volume or pressure load, the tension of ventricular wall increases, which will increase the concentration of BNP in blood.[1]
         </p>
         <p class="underh3">
-          Besides proteins, RNAs can also be used as our target. MiRNAs, a kind of non-coding RNAs, play an important role in post-transcriptional gene regulation.Many miRNAs have been proved to be effective targets for diagnosis or treatment of various diseases. [2]
+          Besides proteins, <strong>RNAs can also be used as our target</strong>. MiRNAs, a kind of non-coding RNAs, play an important role in post-transcriptional gene regulation.Many miRNAs have been proved to be effective targets for diagnosis or treatment of various diseases. [2]
         </p>
         <p class="underh3">
-          CircRNAs regulate gene expression in many ways. It has been found that most circRNA have the specificity of tissue and blood samples and can participate in regulating related diseases. [3]
+          CircRNAs regulate gene expression in many ways. It has been found that <strong>most circRNA have the specificity of tissue and blood samples and can participate in regulating related diseases</strong>. [3]
         </p>
+
         <h3>
           <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
           <div class="cont-h2">Aptamer</div>
@@ -131,6 +132,12 @@
         <p class="underh3">
           Aptamer (Aptamer) is a single strand oligonucleotide that can bind specifically to the target molecule.
         </p>
+        <div class="insertimg">
+          <img src="{{ url_for('static', filename = 'svgs/a3.png')}}" alt=" ">
+          <div class="img_descr">
+            Figure 4: From the Internet
+          </div>
+        </div>
         <p class="underh3">
           The principle of aptamer recognition of target molecules: single-chain oligonucleotides form a specific three-dimensional structure after self-adaptive folding through nucleotide base complementary pairing, hydrogen bonding, π-π stacking, electrostatic force and other interaction forces, and this three-dimensional structure is specifically bound to the target molecule through intermolecular force. Its binding dissociation constant can reach nM and pM levels, which is comparable to that of monoclonal antibody.
         </p>
@@ -138,108 +145,100 @@
           Compared with antibodies, aptamers have many advantages, such as a wider range of target molecules, better thermal stability, smaller molecular weight, chemical synthesis, small batch differences, easy modification, and so on.
         </p>
         <p class="underh3">
-          Because of these advantages of aptamers in target detection, we chose aptamers as the core detection element of our project.
+          Because of these advantages of aptamers in target detection, we chose <strong>aptamers as the core detection element of our project</strong>.
         </p>
 
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">HCR</div>
+        </h3>
+        <p class="underh3">
+          HCR technology is an <strong>isothermal, enzyme-free means</strong> of nucleic acid signal amplification, which can realize signal amplification of target molecules only by triggering a cascade reaction of several self-stable DNA stem-ring structures to produce a long DNA structure with a incision.The specific mechanism is as follows:
+        </p>
+        <p class="underh3">
+          Hairpin probe H1 and H2 are designed. H1 consists of four parts,a,b,c and b*, in which b and b* bases complement each other into double chains as the stem of H1,c is the ring part of the hairpin structure, and a is the viscous end of a single chain extending from the stem of the hairpin structure. H2 consists of four parts: c*,b,a* and b*. Its design is similar to H1, and a,b, and d can complement a*,b*, and c*, respectively. When there is no trigger chain.
+        </p>
+        <p class="underh3">
+          In the presence of (a*b*), although some chains in H1 and H2 can complement each other, because H1 and H2 form stem rings respectively, both of them can exist stably in solution, and will not cross with each other and open each other; When the initiating chain a*b* is added,a*b* first complements the sticky end ab of the stem of H1, opening the stem ring structure of H1, exposing the single chain c*b*, opening the hairpin structure of H2, and then exposing the complementary a*b* of H1, which can <strong>continue to open H1, and the cycle repeats</strong>. After the chain-guided hybridization reaction of H1 and H2, the hairpins H1 and H2 are successively opened to form a double-stranded DNA polymer with long chain notch formed by alternating hybridization of H1 and H2.
+        </p>
         <div class="insertimg">
-          <img src="{{ url_for('static', filename = 'svgs/d3.JPEG')}}" alt=" ">
+          <img src="{{ url_for('static', filename = 'svgs/a2.png')}}" alt=" ">
           <div class="img_descr">
-            Figure3: Biomarkers as predictors of recurrence after atrial fibrillation ablation [6]
+            Figure 5: Direct RNA detection without nucleic acid purification and PCR: Combining sandwich hybridization with signal amplification based on branched hybridization chain reaction. 
           </div>
         </div>
-        <p class="underh2">
-          According to the WORLDHEARTREPORT2023 released by the World Heart Federation (WHF), 20.5 million people died of cardiovascular diseases in 2021, accounting for about one third of the total number of deaths worldwide.
+        <p class="underh3">
+          The reaction belongs to isothermal amplification technology, which can be realized under mild experimental conditions and does not require the participation of auxiliary enzymes, and <strong>has high sensitivity and selectivity for target detection, which can greatly reduce the cost and good reproducibility of the reaction</strong>.
         </p>
-        <p class="underh2">
-          We have screened and counted these target molecules, and the table is as follows:
-        </p>
-        <div class="table">
-          <div class="img_descr">
-            Table 1: Biomarkers of heart diseases
-          </div>
-          <img src="{{ url_for('static', filename = 'svgs/d4.png')}}" alt=" ">
-        </div>
-        <p class="underh2">
-          We want to mass-produce aptamer molecules for target detection by synthetic biology, and develop an <strong>electric sensing rapid diagnostic instrument</strong> based on nucleic acid, protein and other biological targets related to heart diseases, so as to realize rapid and convenient detection of heart diseases.
-        </p>
-        <p class="underh2">
-          This is our project - <strong>Telepathy</strong>, which is a microfluidic biochip, packaged in the form of a test paper. It only needs a drop of blood to complete the diagnosis, and outputs an electrical signal through Bluetooth, showing the risk of illness and the types of diseases on your mobile phone. The whole diagnosis process is non-invasive and very fast, and it can screen a large number of people for heart diseases in a short time.
-        </p>
-        <p class="underh2">
-          We hope our project can contribute to disease diagnosis and world public health!
+        <p class="underh3">
+          In our project, we chose <strong>HCR as the main design link</strong> of signal amplification.
         </p>
       </div>
     </div>
 
-
-
-
-
-      <p class="underh2">
-      </p>
-
-
-      <!-- <h3>
-        <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
-        <div class="cont-h2">Background</div>
-      </h3> -->
-
-      <p class="underh2">
-        In the past three decades, cardiovascular disease has been the main cause of death in the world. 
-        Especially due to the aging population, the number of deaths from <strong>cardiovascular diseases</strong> cardiovascular diseases in the world is increasing.
-      </p>
-      
-
-      <div class="hardw_img">
-        <img src="{{ url_for('static', filename = 'svgs/hard1.png')}}" alt=" ">
+    <div class="part">
+      <div class="s1">
+        <a name="p4" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">Procedure of using</div>
+        </h2>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Product Structure</div>
+        </h3>
+        <div class="hardw_img">
+          <img src="{{ url_for('static', filename = 'svgs/hard1.png')}}" alt=" ">
+        </div>
+        <div class="hardw_img">
+          <img src="{{ url_for('static', filename = 'svgs/hard2.png')}}" alt=" ">
+        </div>
+        <div class="hardw_img">
+          <img src="{{ url_for('static', filename = 'svgs/hard3.png')}}" alt=" ">
+        </div>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Operation Steps</div>
+        </h3>
+        <div class="hardw_img">
+          <img src="{{ url_for('static', filename = 'svgs/a4.png')}}" alt=" ">
+        </div>
       </div>
-      <div class="hardw_img">
-        <img src="{{ url_for('static', filename = 'svgs/hard2.png')}}" alt=" ">
+    </div>
+
+    <div class="part">
+      <div class="s1">
+        <a name="p5" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">Quotes</div>
+        </h2>
+        <p class="underh2">
+          [1] Deng H, Shantsila A, Guo P, Zhan X, Fang X, Liao H, Liu Y, Wei W, Fu L, Wu S, Xue Y, Lip GYH. Multiple biomarkers and arrhythmia outcome following catheter ablation of atrial fibrillation: The Guangzhou Atrial Fibrillation Project. J Arrhythm. 2018 Aug 31;34(6):617-625. doi: 10.1002/joa3.12111. PMID: 30555605; PMCID: PMC6288553.
+        </p>
+        <p class="underh2">
+          [2]Esteller, M. Non-coding RNAs in human disease. Nat Rev Genet 12, 861–874 (2011).doi.org/10.1038/nrg3074
+        </p>
+        <p class="underh2">
+          [3]Zhu L, Wang Z, Sun L, Zheng D, Hu B, Li N, Shao G. Hsa_circ_0000437 upregulates and promotes disease progression in rheumatic valvular heart disease. J Clin Lab Anal. 2022 Feb;36(2):e24197. doi: 10.1002/jcla.24197. Epub 2021 Dec 24. PMID: 34952991; PMCID: PMC8842158.
+        </p>
+        <p class="underh2">
+          [4]Cao Z. Practical exploration of aptamer in drug toxicant analysis[J].Science and technology style,2019(35):133.DOI:10.19392/j.cnki.1671-7341.201935113.
+        </p>
+        <p class="underh2">
+          [5]Wang Yutian, Qu Han, Hao LYu, et al. Rapid detection of Escherichia coli 0157:H7 based on nucleic acid aptamer SERS technique[].Chinese Journal of Pathogen Biology，2018(1):1621.
+        </p>
+        <p class="underh2">
+          [6]Boyalla V, Harling L, Snell A, Kralj-Hans I, Barradas-Pires A, Haldar S, Khan HR, Cleland JGF, Athanasiou T, Harding SE, Wong T. Biomarkers as predictors of recurrence of atrial fibrillation post ablation: an updated and expanded systematic review and meta-analysis. Clin Res Cardiol. 2022 Jun;111(6):680-691. doi: 10.1007/s00392-021-01978-w. Epub 2022 Jan 9. PMID: 34999932; PMCID: PMC9151522.
+        </p>
+        <p class="underh2">
+          [7]Zeng Ling, CAI Nengbin，PAWLOWSKANatalia.Application of aptamer recognition technology in forensic toxicology analysis].Criminal technique，2017，42(1):5260.
+        </p>
+        <p class="underh2">
+          [8]Xu Y, Zheng Z. Direct RNA detection without nucleic acid purification and PCR: Combining sandwich hybridization with signal amplification based on branched hybridization chain reaction. Biosens Bioelectron. 2016 May 15;79:593-9. doi: 10.1016/j.bios.2015.12.057. Epub 2015 Dec 21. PMID: 26761615.
+        </p>
       </div>
-      <div class="hardw_img">
-        <img src="{{ url_for('static', filename = 'svgs/hard3.png')}}" alt=" ">
-      </div>
-
-
-
-      <p class="underh2">
-        According to the <strong>WORLDHEARTREPORT2023</strong> released by the World Heart Federation (WHF), 20.5 million people died of cardiovascular diseases in 2021, 
-        accounting for about one third of the total number of deaths worldwide.
-      </p>
-      
-      <p>
-        Heart disease is the main type of cardiovascular disease. Heart disease can be divided into congenital heart disease (congenital malformation) and acquired heart disease. Among them, acquired heart disease accounts for the majority, such as coronary heart disease, rheumatic heart disease, hypertensive heart disease, cardiomyopathy, sick sinus syndrome and so on, which causes atrial fibrillation, heart failure and other symptoms.
-      </p>
-      <p>
-        At present, the diagnosis of heart disease is mainly based on clinical symptoms (such as chest pain, dyspnea, etc.), physical examination (heart murmur, hypertension, etc.) and electrocardiogram (ECG). However, these methods have some shortcomings, such as low timeliness (usually the results can only be diagnosed when the disease is serious), complicated operation, need of professionals and long-term monitoring alone.
-      </p>
-      <p>
-        Therefore, we need to find a more rapid and convenient detection method.
-      </p>
-
-      <a name="p2" style="position: relative; top: -14vh;"></a>
-      <h2>Project Design
-        <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
-      </h2>
-      <p>
-        Members of WP-G1 found that various RNAs and proteins can be used as target molecules to mark some heart diseases.
-      </p>
-      <p>此处有张表</p>
-      <p>
-        We want to mass-produce aptamer molecules for target detection by synthetic biology, and develop an electric sensing rapid diagnostic instrument based on nucleic acid, protein and other biological targets related to heart diseases, so as to realize rapid and convenient detection of heart diseases.
-      </p>
-      <p>
-        This is our project - Telepathy, which is a microfluidic biochip, packaged in the form of a test paper. It only needs a drop of blood to complete the diagnosis, and outputs an electrical signal through Bluetooth, showing the risk of illness and the types of diseases on your mobile phone. The whole diagnosis process is non-invasive and very fast, and it can screen a large number of people for heart diseases in a short time.
-      </p>
-      <p>
-        We believe that the study of aptamers for disease detection will be one of the hot spots in the future biomedical field. We hope to use Telepathy to guide the early screening of human heart diseases, and use it as a model to develop a new detection system for screening many diseases that are not limited to heart diseases.
-      </p>
-      <p>
-        We hope our project can contribute to disease diagnosis and world public health!
-      </p>
-      <p>
-        For more detailed information about the design, please click the link here.
-      </p>
+    </div>
     </div>
 </div>
 
