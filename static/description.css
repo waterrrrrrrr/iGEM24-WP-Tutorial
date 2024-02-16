@@ -17,8 +17,17 @@
     /* top: -5vh; */
     padding: 1vh 0 1vh 0;
     width: 18vw;
-    position: relative;
-
+    /* position: relative; */
+    position: sticky;
+    top: 14vh;
+}
+.menubox_pos {
+    position: fixed;
+    z-index: 3;
+    top: 14vh;
+    overflow-x: hidden;
+    /* display: flex;
+    flex-direction: column; */
 }
 .title0{
     margin-bottom: 10%;
@@ -85,7 +94,6 @@ strong{
         width: 85%;
     }
 }
-
 
 .insertimg{
     display: flex; 
