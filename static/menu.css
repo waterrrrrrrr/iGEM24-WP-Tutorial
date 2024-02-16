@@ -1,5 +1,6 @@
 .bg-dark { 
-    background-color: rgba(60, 73, 96, 0.8) !important; 
+    background-color: rgb(60, 73, 96) !important; 
+    opacity: 0.8;
     /* background-image: linear-gradient(rgba(60, 73, 96, 1),rgba(32,38,50,0)); */
 }/*check*/
 .navbar { height: 10vh !important; }
