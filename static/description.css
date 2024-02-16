@@ -108,7 +108,7 @@ strong{
     display: flex; 
     flex-direction: column;
     align-items: center;
-    margin: 1rem;
+    margin: 1.5rem;
 }
 .hardw_img img {
     width: 80%;
