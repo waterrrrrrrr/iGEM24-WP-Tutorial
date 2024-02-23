@@ -1,41 +1,178 @@
 {% extends "layout.html" %}
   
 {% block title %}Model{% endblock %}
-{% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{% endblock %}
+<!-- {% block lead %}Describe how and why you chose your iGEM project.{% endblock %} -->
 
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Model</h4>
-      <p>Models and computer simulations provide a great way to describe the functioning and operation of BioBrick Parts and Devices. Synthetic biology is an engineering discipline and part of engineering is simulation and modeling to determine system behavior before building your design. Designing and simulating can be iterated many times in a computer before moving to the lab. This award is for teams who build a model of their system and use it to inform system design or simulate expected behavior before or in conjunction with experiments in the wetlab.</p>
-      <p>To compete for the Best Model prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2023 Awards Page</a> for more information.</p>
-    </div>
-  </div>
+<!-- CSS -->
+<link href="{{ url_for('static', filename = 'cont-page.css')}}" rel="stylesheet">
+
+<!-- Main Part -->
+<a name="top"></a>
+
+<div class="cont-title-box">
+  <!-- <div class="cont-title-word">{{ self.title() }}</div> -->
+  <img src="{{ url_for('static', filename = 'svgs/model/1.svg')}}" alt="content's title" class="cont-title-pic">
 </div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr>
-    <p>Mathematical models and computer simulations provide a great way to describe the function and operation of Parts and Devices. Synthetic Biology is an engineering discipline, and part of engineering is simulation and modeling to determine the behavior of your design before you build it. Designing and simulating can be iterated many times in a computer before moving to the lab.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="http://2018.igem.org/Team:GreatBay_China/Model">2018 GreatBay China</a></li>
-      <li><a href="http://2018.igem.org/Team:Leiden/Model">2018 Leiden</a></li>
-      <li><a href="https://2019.igem.org/Team:IISER_Kolkata/Model">2019 IISER Kolkata</a></li>
-      <li><a href="https://2019.igem.org/Team:Exeter/Model">2019 Exeter</a></li>
-      <li><a href="https://2019.igem.org/Team:Mingdao/Model">2019 Mingdao</a></li>
-      <li><a href="https://2020.igem.org/Team:Harvard/Model">2020 Harvard</a></li>
-      <li><a href="https://2020.igem.org/Team:Leiden/Model">2020 Leiden</a></li>
-    </ul>
-  </div>
+<div class="back-box">
+  <a href="#top">
+    <img src="{{ url_for('static', filename = 'svgs/back2top.svg')}}" alt=" " class="back2top">
+  </a>
 </div>
+
+<div class="pagebody">
+  <div class="menubox">
+    <div class="title0">{{ self.title() }}</div>
+    <div class="title1"><a href="#p1">- Overview</a></div>
+    <div class="title1"><a href="#p2">- Introduction to nucleic acid detection model</a></div>
+      <div class="title2"><a href="#p2-1">Synthesis of dsDNA</a></div>
+      <div class="title2"><a href="#p2-2">The capture efficiency of MB</a></div>
+    <div class="title1"><a href="#p3">- Protein detection model introduction</a></div>
+    <div class="title1"><a href="#p4">- Using machine learning to compute the correlation between targets and diseases</a></div>
+  </div>
+
+  <div class="contentbox">
+    <div class="part">
+      <div class="s1">
+        <a name="p1" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">Overview</div>
+        </h2>
+        <p class="underh2">
+          Our project aims to provide a one-time, short-term heart disease screening solution targeted at individuals in households or communities. Therefore, during the user testing process, we need to provide clear and specific steps for operation, as well as the time intervals between each step. Our product simultaneously detects nucleic acids and proteins, so the modeling work involves determining the time points at which the electrical signals for both substances reach their peak values, facilitating the detection of results. Additionally, we need to calculate the capture efficiency of methylene blue (MB) to determine the proportion of MB added to the aptamer for further analysis.
+        </p>
+      </div>
+    </div>
+    
+    <div class="part">
+      <div class="s1">
+        <a name="p2" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">Introduction to nucleic acid detection model</div>
+        </h2>
+        <p class="underh2">
+          The process of nucleic acid detection can be idealized as consisting of two processes: the synthesis of dsDNA and the capture of charged MB.
+        </p>
+        
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Synthesis of dsDNA</div>
+        </h3>
+        <p class="underh3">
+          We can simplify it into three steps: first, the opening reaction, specifically referring to the pairing of miRNA with the bulb-shaped H1 fixed on the substrate, causing the double-stranded part of H1 to open; second, the pairing reaction, which includes the complementary pairing of miRNA with the H1 portion, as well as the cascade reaction between H2 and H3; and third, the cascade reaction, referring to the process where the miRNA-H1 complex undergoes a cascade reaction with a 1:1 ratio of H2 and H3.
+        </p>
+        <div class="insertimg">
+          <img src="{{ url_for('static', filename = 'svgs/model/2.PNG')}}" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            （Note: Here "MB" refers to the substrate）
+          </div>
+        </div>
+
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Binding reaction：</div>
+        </h3>
+        <p class="underh3">
+          In the binding reaction, we use Freundlich adsorption equation to describe the strength of connection between DNA single strands, in order to simulate their opening and closing.
+        </p>
+        <p class="underh3">
+          The Freundlich adsorption equation is an empirical model that describes the distribution of solute on the surface of an adsorbent. Its basic form is:
+        </p>
+        <div class="equation-box">
+          <img src="{{ url_for('static', filename = 'svgs/model/equation.svg')}}" alt=" " class="equation">
+        </div>
+        <p class="underh3">
+          Where:
+          <ul>
+            <li>( q ) is the amount adsorbed on the adsorbent.</li>
+            <li>( C ) is the concentration of solute in the liquid phase.</li>
+            <li>( K_c ) is the Freundlich constant representing adsorption strength.</li>
+            <li>( n ) is the non-uniformity coefficient of the Freundlich adsorption equation, typically between 1 and 10.</li>
+          </ul>
+        </p>
+        <p class="underh3">
+          The basic implementation of the Freundlich adsorption equation function is:
+        </p>
+        <div class="equation-box">
+          <img src="{{ url_for('static', filename = 'svgs/model/3.svg')}}" alt=" " class="equation">
+        </div>
+        <p class="underh3">
+          But in our project, we need to consider the effects of temperature and pH on the binding strength of the bases. According to literature research, both temperature and pH show a linear relationship with the parameter (K_c) in the Freundlich adsorption equation within certain limits. Therefore, if we control the experimental conditions within these limits, we can simply assume a linear relationship. Hence, we need to include a parameter correction term in the code.
+        </p>
+        <div class="codebox">
+        <pre class="underh3">
+% 模拟DNA链扭转和打开过程
+for i = 2:N_steps
+    % 添加扰动项
+    theta_noise = epsilon * randn();  % 随机扰动项
+    F_noise = epsilon * randn();      % 随机扰动项
+    
+    F(i) = -k_twist * (theta(i-1) + theta_noise) + k_open * (R(i-1) + F_noise);
+    theta(i) = theta(i-1) + k_twist * (F(i-1) + F_noise) * dt;
+    R(i) = R(i-1);
+    % 输出更多信息
+    disp(['步数:', num2str(i), ', 扭转角度:', num2str(theta(i)), ', 外力:', num2str(F(i)), ', DNA链向心力:', num2str(R(i))]);
+    if theta(i) > 15 % 如果扭转角达到一定值，则视为DNA链打开
+        disp(['DNA链预计在第', num2str(i), '步打开']);
+        break;
+    end
+end
+        </pre>
+      </div>
+        <div class="equation-box">
+          <img src="{{ url_for('static', filename = 'svgs/model/4.svg')}}" alt=" " class="equation">
+        </div>
+
+        <div class="equation-box">
+          <img src="{{ url_for('static', filename = 'svgs/model/4.svg')}}" alt=" " class="equation">
+        </div>
+
+        <p class="underh3">
+          This function takes the base constant base_K, temperature, and pH values as parameters and returns the calculated K_c for the matching reaction. In the calculation of the matching reaction, k_bind is multiplied by H2_concentration and H3_concentration, and adjusted through the call to compute_K to account for the effects of temperature and pH on the matching rate.
+        </p>
+        <p class="underh3">
+          This implementation allows the matching rate constant k_bind to be dynamically adjusted based on the actual experimental conditions of temperature and pH, leading to a more accurate simulation of the dynamic behavior of the matching reaction. Due to the minimal changes in temperature and pH during the reaction, using molecular dynamics simulation methods would not only be time-consuming but also yield little benefit, hence employing a simple Freundlich adsorption equation model already achieves a good simulation level.
+        </p>
+        <p class="underh3">
+          Visualization results:
+        </p>
+        <div class="hardw_img">
+          <img src="{{ url_for('static', filename = 'svgs/model/6.PNG')}}" alt=" ">
+        </div>
+        <div class="hardw_img">
+          <img src="{{ url_for('static', filename = 'svgs/model/5.PNG')}}" alt=" ">
+        </div>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="s1">
+        <a name="p3" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">The capture efficiency of MB</div>
+        </h2>
+        <p class="underh3">
+          I used two different models for the modeling of this section separately.
+        </p>
+          
+        <a name="p3-1" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">One: Using the Michaelis-Menten Saturation Model to model the capture efficiency of MB.</div>
+        </h3>
+        <p class="underh3">
+          The Michaelis-Menten Saturation Model is a relatively simple and classic model, its equation is:
+        </p>
+      </div>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename = 'dp.js') }}"></script>
 
 {% endblock %}

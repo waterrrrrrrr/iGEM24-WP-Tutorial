@@ -6,24 +6,38 @@
 {% block page_content %}
 
 <!-- CSS -->
-<link href="{{ url_for('static', filename = 'description.css')}}" rel="stylesheet">
+<link href="{{ url_for('static', filename = 'cont-page.css')}}" rel="stylesheet">
 
 <!-- Main Part -->
+<a name="top"></a>
+
 <div class="cont-title-box">
-  <img src="{{ url_for('static', filename = 'svgs/content-title.svg')}}" alt="content's title" class="cont-title">
+  <!-- <div class="cont-title-word">{{ self.title() }}</div> -->
+  <img src="{{ url_for('static', filename = 'svgs/description/content-title.svg')}}" alt="content's title" class="cont-title-pic">
 </div>
+
+<div class="back-box">
+  <a href="#top">
+    <img src="{{ url_for('static', filename = 'svgs/back2top.svg')}}" alt=" " class="back2top">
+  </a>
+</div>
+
 <div class="pagebody">
   <div class="menubox">
     <div class="title0">{{ self.title() }}</div>
     <div class="title1"><a href="#p1">- Background</a></div>
     <div class="title1"><a href="#p2">- Project Design</a></div>
     <div class="title1"><a href="#p3">- Theoretical Basis</a></div>
+      <div class="title2"><a href="#p3-1">Cause of targets' emergence</a></div>
+      <div class="title2"><a href="#p3-2">Aptamer</a></div>
+      <div class="title2"><a href="#p3-3">HCR</a></div>
     <div class="title1"><a href="#p4">- Procedure of using</a></div>
+      <div class="title2"><a href="#p4-1">Product Structure</a></div> 
+      <div class="title2"><a href="#p4-2">Operation Steps</a></div> 
     <div class="title1"><a href="#p5">- Quotes</a></div>
   </div>
 
   <div class="contentbox">
-
     <div class="part">
       <div class="s1">
         <a name="p1" style="position: relative; top: -14vh;"></a>
@@ -35,7 +49,7 @@
           In the past three decades, cardiovascular disease has been the main cause of death in the world. Especially due to the aging population, the number of deaths from cardiovascular diseases in the world is increasing.
         </p>
         <div class="insertimg">
-          <img src="{{ url_for('static', filename = 'svgs/descr1.svg')}}" alt=" ">
+          <img src="{{ url_for('static', filename = 'svgs/description/descr1.svg')}}" alt=" ">
           <div class="img_descr">
             Figure1: From the Internet
           </div>
@@ -44,7 +58,7 @@
           According to the WORLDHEARTREPORT2023 released by the World Heart Federation (WHF), 20.5 million people died of cardiovascular diseases in 2021, accounting for about one third of the total number of deaths worldwide.
         </p>
         <div class="table">
-          <img src="{{ url_for('static', filename = 'svgs/table1.svg')}}" alt="number of CVD deaths">
+          <img src="{{ url_for('static', filename = 'svgs/description/table1.svg')}}" alt="number of CVD deaths">
           <div class="img_descr">
             Figure2: Global trends in number of deaths due to cardiovascular diseases,1990-2019
           </div>
@@ -72,7 +86,7 @@
           Members of WP-G1 found that various RNAs and proteins can be used as target molecules to mark some heart diseases.
         </p>
         <div class="insertimg">
-          <img src="{{ url_for('static', filename = 'svgs/a1.png')}}" alt=" ">
+          <img src="{{ url_for('static', filename = 'svgs/description/a1.png')}}" alt=" ">
           <div class="img_descr">
             Figure3: Biomarkers as predictors of recurrence after atrial fibrillation ablation [6]
           </div>
@@ -87,7 +101,7 @@
           <div class="img_descr">
             Table 1: Biomarkers of heart diseases
           </div>
-          <img src="{{ url_for('static', filename = 'svgs/d4.png')}}" alt=" ">
+          <img src="{{ url_for('static', filename = 'svgs/description/d4.png')}}" alt=" ">
         </div>
         <p class="underh2">
           We want to mass-produce aptamer molecules for target detection by synthetic biology, and develop an <strong>electric sensing rapid diagnostic instrument</strong> based on nucleic acid, protein and other biological targets related to heart diseases, so as to realize rapid and convenient detection of heart diseases.
@@ -108,6 +122,7 @@
           <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
           <div class="cont-h1">Theoretical Basis</div>
         </h2>
+        <a name="p3-1" style="position: relative; top: -12vh;"></a>
         <h3>
           <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
           <div class="cont-h2">Cause of targets' emergence</div>
@@ -125,6 +140,7 @@
           CircRNAs regulate gene expression in many ways. It has been found that <strong>most circRNA have the specificity of tissue and blood samples and can participate in regulating related diseases</strong>. [3]
         </p>
 
+        <a name="p3-2" style="position: relative; top: -12vh;"></a>
         <h3>
           <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
           <div class="cont-h2">Aptamer</div>
@@ -133,7 +149,7 @@
           Aptamer (Aptamer) is a single strand oligonucleotide that can bind specifically to the target molecule.
         </p>
         <div class="insertimg">
-          <img src="{{ url_for('static', filename = 'svgs/a3.png')}}" alt=" ">
+          <img src="{{ url_for('static', filename = 'svgs/description/a3.png')}}" alt=" ">
           <div class="img_descr">
             Figure 4: From the Internet
           </div>
@@ -148,6 +164,7 @@
           Because of these advantages of aptamers in target detection, we chose <strong>aptamers as the core detection element of our project</strong>.
         </p>
 
+        <a name="p3-3" style="position: relative; top: -12vh;"></a>
         <h3>
           <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
           <div class="cont-h2">HCR</div>
@@ -162,7 +179,7 @@
           In the presence of (a*b*), although some chains in H1 and H2 can complement each other, because H1 and H2 form stem rings respectively, both of them can exist stably in solution, and will not cross with each other and open each other; When the initiating chain a*b* is added,a*b* first complements the sticky end ab of the stem of H1, opening the stem ring structure of H1, exposing the single chain c*b*, opening the hairpin structure of H2, and then exposing the complementary a*b* of H1, which can <strong>continue to open H1, and the cycle repeats</strong>. After the chain-guided hybridization reaction of H1 and H2, the hairpins H1 and H2 are successively opened to form a double-stranded DNA polymer with long chain notch formed by alternating hybridization of H1 and H2.
         </p>
         <div class="insertimg">
-          <img src="{{ url_for('static', filename = 'svgs/a2.png')}}" alt=" ">
+          <img src="{{ url_for('static', filename = 'svgs/description/a2.png')}}" alt=" ">
           <div class="img_descr">
             Figure 5: Direct RNA detection without nucleic acid purification and PCR: Combining sandwich hybridization with signal amplification based on branched hybridization chain reaction. 
           </div>
@@ -183,25 +200,27 @@
           <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
           <div class="cont-h1">Procedure of using</div>
         </h2>
+        <a name="p4-1" style="position: relative; top: -12vh;"></a>
         <h3>
           <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
           <div class="cont-h2">Product Structure</div>
         </h3>
         <div class="hardw_img">
-          <img src="{{ url_for('static', filename = 'svgs/hard1.png')}}" alt=" ">
+          <img src="{{ url_for('static', filename = 'svgs/description/hard1.png')}}" alt=" ">
         </div>
         <div class="hardw_img">
-          <img src="{{ url_for('static', filename = 'svgs/hard2.png')}}" alt=" ">
+          <img src="{{ url_for('static', filename = 'svgs/description/hard2.png')}}" alt=" ">
         </div>
         <div class="hardw_img">
-          <img src="{{ url_for('static', filename = 'svgs/hard3.png')}}" alt=" ">
+          <img src="{{ url_for('static', filename = 'svgs/description/hard3.png')}}" alt=" ">
         </div>
+        <a name="p4-2" style="position: relative; top: -12vh;"></a>
         <h3>
           <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
           <div class="cont-h2">Operation Steps</div>
         </h3>
         <div class="hardw_img">
-          <img src="{{ url_for('static', filename = 'svgs/a4.png')}}" alt=" ">
+          <img src="{{ url_for('static', filename = 'svgs/description/a4.png')}}" alt=" ">
         </div>
       </div>
     </div>
