@@ -15,6 +15,11 @@
 
     <title>Description | ZJU-China - iGEM WP1</title>
 
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <!-- Navigation -->
@@ -98,24 +103,38 @@
     
 
 <!-- CSS -->
-<link href="../static/description.css" rel="stylesheet">
+<link href="../static/cont-page.css" rel="stylesheet">
 
 <!-- Main Part -->
+<a name="top"></a>
+
 <div class="cont-title-box">
-  <img src="../static/svgs/content-title.svg" alt="content's title" class="cont-title">
+  <!-- <div class="cont-title-word">Description</div> -->
+  <img src="../static/svgs/description/content-title.svg" alt="content's title" class="cont-title-pic">
 </div>
+
+<div class="back-box">
+  <a href="#top">
+    <img src="../static/svgs/back2top.svg" alt=" " class="back2top">
+  </a>
+</div>
+
 <div class="pagebody">
   <div class="menubox">
     <div class="title0">Description</div>
     <div class="title1"><a href="#p1">- Background</a></div>
     <div class="title1"><a href="#p2">- Project Design</a></div>
     <div class="title1"><a href="#p3">- Theoretical Basis</a></div>
+      <div class="title2"><a href="#p3-1">Cause of targets' emergence</a></div>
+      <div class="title2"><a href="#p3-2">Aptamer</a></div>
+      <div class="title2"><a href="#p3-3">HCR</a></div>
     <div class="title1"><a href="#p4">- Procedure of using</a></div>
+      <div class="title2"><a href="#p4-1">Product Structure</a></div> 
+      <div class="title2"><a href="#p4-2">Operation Steps</a></div> 
     <div class="title1"><a href="#p5">- Quotes</a></div>
   </div>
 
   <div class="contentbox">
-
     <div class="part">
       <div class="s1">
         <a name="p1" style="position: relative; top: -14vh;"></a>
@@ -127,7 +146,7 @@
           In the past three decades, cardiovascular disease has been the main cause of death in the world. Especially due to the aging population, the number of deaths from cardiovascular diseases in the world is increasing.
         </p>
         <div class="insertimg">
-          <img src="../static/svgs/descr1.svg" alt=" ">
+          <img src="../static/svgs/description/descr1.svg" alt=" ">
           <div class="img_descr">
             Figure1: From the Internet
           </div>
@@ -136,7 +155,7 @@
           According to the WORLDHEARTREPORT2023 released by the World Heart Federation (WHF), 20.5 million people died of cardiovascular diseases in 2021, accounting for about one third of the total number of deaths worldwide.
         </p>
         <div class="table">
-          <img src="../static/svgs/table1.svg" alt="number of CVD deaths">
+          <img src="../static/svgs/description/table1.svg" alt="number of CVD deaths">
           <div class="img_descr">
             Figure2: Global trends in number of deaths due to cardiovascular diseases,1990-2019
           </div>
@@ -164,7 +183,7 @@
           Members of WP-G1 found that various RNAs and proteins can be used as target molecules to mark some heart diseases.
         </p>
         <div class="insertimg">
-          <img src="../static/svgs/a1.png" alt=" ">
+          <img src="../static/svgs/description/a1.png" alt=" ">
           <div class="img_descr">
             Figure3: Biomarkers as predictors of recurrence after atrial fibrillation ablation [6]
           </div>
@@ -179,7 +198,7 @@
           <div class="img_descr">
             Table 1: Biomarkers of heart diseases
           </div>
-          <img src="../static/svgs/d4.png" alt=" ">
+          <img src="../static/svgs/description/d4.png" alt=" ">
         </div>
         <p class="underh2">
           We want to mass-produce aptamer molecules for target detection by synthetic biology, and develop an <strong>electric sensing rapid diagnostic instrument</strong> based on nucleic acid, protein and other biological targets related to heart diseases, so as to realize rapid and convenient detection of heart diseases.
@@ -200,6 +219,7 @@
           <img src="../static/svgs/title_logo.svg" alt=" " class="titlelogo">
           <div class="cont-h1">Theoretical Basis</div>
         </h2>
+        <a name="p3-1" style="position: relative; top: -12vh;"></a>
         <h3>
           <img src="../static/svgs/subtitle_logo.svg" alt=" " class="subtitlelogo">
           <div class="cont-h2">Cause of targets' emergence</div>
@@ -217,6 +237,7 @@
           CircRNAs regulate gene expression in many ways. It has been found that <strong>most circRNA have the specificity of tissue and blood samples and can participate in regulating related diseases</strong>. [3]
         </p>
 
+        <a name="p3-2" style="position: relative; top: -12vh;"></a>
         <h3>
           <img src="../static/svgs/subtitle_logo.svg" alt=" " class="subtitlelogo">
           <div class="cont-h2">Aptamer</div>
@@ -225,7 +246,7 @@
           Aptamer (Aptamer) is a single strand oligonucleotide that can bind specifically to the target molecule.
         </p>
         <div class="insertimg">
-          <img src="../static/svgs/a3.png" alt=" ">
+          <img src="../static/svgs/description/a3.png" alt=" ">
           <div class="img_descr">
             Figure 4: From the Internet
           </div>
@@ -240,6 +261,7 @@
           Because of these advantages of aptamers in target detection, we chose <strong>aptamers as the core detection element of our project</strong>.
         </p>
 
+        <a name="p3-3" style="position: relative; top: -12vh;"></a>
         <h3>
           <img src="../static/svgs/subtitle_logo.svg" alt=" " class="subtitlelogo">
           <div class="cont-h2">HCR</div>
@@ -254,7 +276,7 @@
           In the presence of (a*b*), although some chains in H1 and H2 can complement each other, because H1 and H2 form stem rings respectively, both of them can exist stably in solution, and will not cross with each other and open each other; When the initiating chain a*b* is added,a*b* first complements the sticky end ab of the stem of H1, opening the stem ring structure of H1, exposing the single chain c*b*, opening the hairpin structure of H2, and then exposing the complementary a*b* of H1, which can <strong>continue to open H1, and the cycle repeats</strong>. After the chain-guided hybridization reaction of H1 and H2, the hairpins H1 and H2 are successively opened to form a double-stranded DNA polymer with long chain notch formed by alternating hybridization of H1 and H2.
         </p>
         <div class="insertimg">
-          <img src="../static/svgs/a2.png" alt=" ">
+          <img src="../static/svgs/description/a2.png" alt=" ">
           <div class="img_descr">
             Figure 5: Direct RNA detection without nucleic acid purification and PCR: Combining sandwich hybridization with signal amplification based on branched hybridization chain reaction. 
           </div>
@@ -275,25 +297,27 @@
           <img src="../static/svgs/title_logo.svg" alt=" " class="titlelogo">
           <div class="cont-h1">Procedure of using</div>
         </h2>
+        <a name="p4-1" style="position: relative; top: -12vh;"></a>
         <h3>
           <img src="../static/svgs/subtitle_logo.svg" alt=" " class="subtitlelogo">
           <div class="cont-h2">Product Structure</div>
         </h3>
         <div class="hardw_img">
-          <img src="../static/svgs/hard1.png" alt=" ">
+          <img src="../static/svgs/description/hard1.png" alt=" ">
         </div>
         <div class="hardw_img">
-          <img src="../static/svgs/hard2.png" alt=" ">
+          <img src="../static/svgs/description/hard2.png" alt=" ">
         </div>
         <div class="hardw_img">
-          <img src="../static/svgs/hard3.png" alt=" ">
+          <img src="../static/svgs/description/hard3.png" alt=" ">
         </div>
+        <a name="p4-2" style="position: relative; top: -12vh;"></a>
         <h3>
           <img src="../static/svgs/subtitle_logo.svg" alt=" " class="subtitlelogo">
           <div class="cont-h2">Operation Steps</div>
         </h3>
         <div class="hardw_img">
-          <img src="../static/svgs/a4.png" alt=" ">
+          <img src="../static/svgs/description/a4.png" alt=" ">
         </div>
       </div>
     </div>
@@ -340,41 +364,45 @@
   </div>
 
   <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
-  <!-- <footer class="pt-5 pb-5 footer py-5 mt-5 bg-dark text-white">
+  <footer class="pt-5 pb-5 footer py-5 mt-5 bg-dark text-white">
   <div class="container">
     <div class="row mb-4">
       <div class="col-lg-6 col-xs-12">
-        <h4 class="mb-3">Heading</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante mollis quam tristique convallis</p>
+        <div class="footer-img">
+          <img src="../static/svgs/footer_logo.svg" alt=" ">
+        </div>
+        <p>A Multiplex Electrosensing Rapid <strong>Test Kit</strong>
+          for <strong>Cardiovascular Disease.</strong></p>
       </div>
       <div class="col-lg-3 col-xs-12">
-        <h4 class="mt-lg-0 mt-sm-3">Links</h4>
+        <h4 class="mt-lg-0 mt-sm-4 mb-3">Open Source</h4>
           <ul class="m-2 p-2">
-            <li><a href="#">Lorem ipsum</a></li>
-            <li><a href="#">Nam mauris velit</a></li>
-            <li><a href="#">Etiam vitae mauris</a></li>
-            <li><a href="#">Fusce scelerisque</a></li>
-            <li><a href="#">Sed faucibus</a></li>
-            <li><a href="#">Mauris efficitur nulla</a></li>
+            <li><a href="https://github.com/waterrrrrrrr/iGEM24-WP-Tutorial">Webite</a></li>
+            <li><a href="#">Software</a></li>
           </ul>
       </div>
       <div class="col-lg-3 col-xs-12">
         <h4 class="mt-lg-0 mt-sm-4 mb-3">Contact</h4>
-        <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
-        <p class="mb-0">(541) 754-3010</p>
-        <p>info@hsdf.com</p>
+        <ul class="m-2 p-2">
+          <li>Instagram(@telepathy.igem)</li>
+          <li>Youtube channel</li>
+          <li>telepathy.igem@gmail.com </li>
+        </ul>
       </div>
     </div>
     <hr>
     <!-- The following MUST be on every page: license information and link to the repository on gitlab.igem.org -->
     <div class="row mt-4">
       <div class="col">
-        <p class="mb-0"><small>© 2023 - Content on this site is licensed under a <a class="subfoot" href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International license</a>.</small></p>
-	      <p><small>The repository used to create this website is available at <a href="https://gitlab.igem.org/2023/zju-china">gitlab.igem.org/2023/zju-china</a>.</small></p>
+        <div class="box0">
+          <p><small>Built by Zhejiang University</small></p>
+          <img src="../static/svgs/f.png" alt=" ">
+          <p><small>iGEM 2024</small></p>
+      </div>
       </div>
     </div>
   </div>
-</footer> -->
+</footer>
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="../static/bootstrap.bundle.min.js"></script>

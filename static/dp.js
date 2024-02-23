@@ -43,7 +43,7 @@ function scrollToShowImage() {
         }
     }
 
-    if(document.documentElement.scrollTop > 342){
+    if(document.documentElement.scrollTop > 50){
         navbar.style.opacity = '1';
 
         // menubox.classList.add("menubox_pos"); /*添加样式*/
