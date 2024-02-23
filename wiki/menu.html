@@ -27,8 +27,10 @@
             Team
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='team') }}">Team</a></li>
             <li><a class="dropdown-item" href="{{ url_for('pages', page='attributions') }}">Attributions</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='collaborations') }}">Collaborations</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='member') }}">Member</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='sponsors') }}">Sponsors</a></li>
           </ul>
         </li>
 
@@ -38,41 +40,19 @@
             Project
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='contribution') }}">Contribution</a></li>
             <li><a class="dropdown-item" href="{{ url_for('pages', page='description') }}">Description</a></li>
             <li><a class="dropdown-item" href="{{ url_for('pages', page='engineering') }}">Engineering</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='experiments') }}">Experiments</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='notebook') }}">Notebook</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='results') }}">Results</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='hardware') }}">Hardware</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='implementation') }}">Implementation</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='model') }}">Model</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='safety') }}">Safety</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='software') }}">Software</a></li>
           </ul>
-        </li>
-
-        <!---- SAFETY ---->
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('pages', page='safety') }}">Safety</a>
         </li>
 
         <!---- HUMAN PRACTICES ---->
         <li class="nav-item">
           <a class="nav-link" href="{{ url_for('pages', page='human-practices') }}">Human Practices</a>
-        </li>
-
-        <!---- AWARDS ---->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Awards
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='education') }}">Education</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='entrepreneurship') }}">Entrepreneurship</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='hardware') }}">Hardware</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='inclusivity') }}">Inclusivity</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='measurement') }}">Measurement</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='model') }}">Model</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='plant') }}">Plant</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='software') }}">Software</a></li>
-            <li><a class="dropdown-item" href="{{ url_for('pages', page='sustainable') }}">Sustainable</a></li>
-          </ul>
         </li>
 
       </ul>
