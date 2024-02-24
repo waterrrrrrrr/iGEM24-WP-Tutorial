@@ -45,22 +45,6 @@
     overflow-y: scroll;
     height: 80vh;
 }
-/* 隐藏滚动条的轨道 */
-.menubox::-webkit-scrollbar {
-    width: 7px; /* 设置滚动条宽度 */
-}
-
-/* 定制滚动条轨道 */
-.menubox::-webkit-scrollbar-track {
-    background: transparent; /* 轨道背景色 */
-}
-
-/* 定制滚动条滑块 */
-.menubox::-webkit-scrollbar-thumb {
-    background: #8A8A8A; /* 滑块颜色 */
-    border-radius: 5px;
-}
-
 
 /* .menubox_pos {
     position: fixed;
@@ -132,6 +116,7 @@
     display: flex; 
     flex-direction: column;
     align-items: center;
+    
     margin: 3rem 0 3rem 0;
     height: 20rem;
 }
@@ -143,7 +128,7 @@
     border-radius: 29px;
     background: #7a8085;
     margin-left: 1rem;
-    padding: 1rem 1.5rem 0.8rem 0;
+    padding: 1rem 1.5rem 1rem 0;
 }
 
 strong{
@@ -164,6 +149,7 @@ strong{
     display: flex; 
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 1.5rem 0 1rem 0;
 }
 
@@ -211,4 +197,13 @@ strong{
 .table img{
     width: 84%;
     margin: 1rem 0 1rem 0;
+}
+
+.subtle1{
+    width: 30%;
+    translate: 120%;
+}
+.subtle2{
+    width: 93%;
+    translate: 5%;
 }
