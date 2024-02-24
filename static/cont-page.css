@@ -20,12 +20,7 @@
 .back-box{
     width: 10%;
 } */
-.back2top {
-    width: 4rem;
-    position: fixed;
-    right: 8px;
-    bottom: 8px;
-}
+
 
 .pagebody{
     display: flex;
@@ -42,20 +37,38 @@
     /* background-color: antiquewhite; */
     margin-left: 7vw;
     /* top: -5vh; */
-    padding: 1vh 0 1vh 0;
+    padding: 1vh 10px 1vh 0;
     width: 18vw;
     /* position: relative; */
     position: sticky;
     top: 14vh;
+    overflow-y: scroll;
+    height: 80vh;
 }
-.menubox_pos {
+/* 隐藏滚动条的轨道 */
+.menubox::-webkit-scrollbar {
+    width: 7px; /* 设置滚动条宽度 */
+}
+
+/* 定制滚动条轨道 */
+.menubox::-webkit-scrollbar-track {
+    background: transparent; /* 轨道背景色 */
+}
+
+/* 定制滚动条滑块 */
+.menubox::-webkit-scrollbar-thumb {
+    background: #8A8A8A; /* 滑块颜色 */
+    border-radius: 5px;
+}
+
+
+/* .menubox_pos {
     position: fixed;
     z-index: 3;
     top: 14vh;
+    overflow-y: auto;
     overflow-x: hidden;
-    /* display: flex;
-    flex-direction: column; */
-}
+} */
 .title0{
     margin-bottom: 10%;
     font-family: 'Courier New', Courier, monospace;
@@ -112,15 +125,25 @@
 .contentbox .s1 h3 .cont-h2 { font-size: 1.2rem; margin: 0 0 0 1rem; color: #53CAFC;}
 .contentbox .s1 h3 .subtitlelogo { margin: 0.3rem 0 0 1rem; height: 0.7rem;}
 /*passage*/
-.contentbox .s1 .underh3 { font-size: 1rem; line-height: 170%; margin: 1.6rem 0 1.6rem 2.4rem;}
+.contentbox .s1 .underh3 { font-size: 1rem; line-height: 170%; margin: 1rem 0 1rem 2.4rem;}
 
 .contentbox .s1 .quote { font-size: 0.9rem; line-height: 170%; margin: 1.6rem 0 1.6rem 0; color: #8A8A8A;}
+.insertimgnew{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem 0 3rem 0;
+    height: 20rem;
+}
+.insertimgnew img{
+    height: 100%;
+}
 
 .codebox {
     border-radius: 29px;
-background: #7a8085;
-box-shadow:  20px 20px 60px #686d71;
-    border: 2rem 2rem 2rem 2rem;
+    background: #7a8085;
+    margin-left: 1rem;
+    padding: 1rem 1.5rem 0.8rem 0;
 }
 
 strong{

@@ -1,0 +1,12 @@
+/* .home-pic {
+    width:100%;
+} */
+.home-pic img {
+    width: 100%;
+}
+.v{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin: 3rem;
+}

@@ -18,6 +18,12 @@ a {
 .bd-callout-info { border-left-color:#5bc0de }
 .bd-callout-warning { border-left-color:#f0ad4e }
 .bd-callout-danger { border-left-color:#d9534f } */
+.back2top {
+    width: 4rem;
+    position: fixed;
+    right: 8px;
+    bottom: 8px;
+}
 strong{
     color: #75BC8D;
 }
