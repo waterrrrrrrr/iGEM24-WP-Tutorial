@@ -1,43 +1,220 @@
 {% extends "layout.html" %}
   
 {% block title %}Hardware{% endblock %}
-{% block lead %}Hardware in iGEM should make synthetic biology based on standard parts easier, faster, better, or more accessible to our community.{% endblock %}
+<!-- {% block lead %}Describe how and why you chose your iGEM project.{% endblock %} -->
 
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Hardware</h4>
-      <p>This is a prize for the team that has developed a piece of hardware for synthetic biology. Hardware in iGEM should make synthetic biology based on standard parts easier, faster, better or more accessible to our community. Did your team make a sensor to help teams characterize parts? Did you make a robot that can help teams perform experiments or do cloning more easily? Tell us what your team did for this award!</p>
-      <p>To compete for the Best Hardware prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2023 Awards Page</a> for more information.</p>
+<!-- CSS -->
+<link href="{{ url_for('static', filename = 'cont-page.css')}}" rel="stylesheet">
+
+<!-- Main Part -->
+<a name="top"></a>
+
+<div class="cont-title-box">
+  <!-- <div class="cont-title-word">{{ self.title() }}</div> -->
+  <img src="{{ url_for('static', filename = 'svgs/Hardware.png')}}" alt="content's title" class="cont-title-pic">
+</div>
+
+<div class="back-box">
+  <a href="#top">
+    <img src="{{ url_for('static', filename = 'svgs/back2top.svg')}}" alt=" " class="back2top">
+  </a>
+</div>
+
+<div class="pagebody">
+  <div class="menubox">
+    <div class="title0">{{ self.title() }}</div>
+    <div class="title1"><a href="#p1">- Overview</a></div>
+    <div class="title1"><a href="#p2">- Design</a></div>
+      <div class="title2"><a href="#p2-1">Blood pen</a></div>
+      <div class="title2"><a href="#p2-2">Test cassette</a></div>
+      <div class="title2"><a href="#p2-3">Biochips</a></div>
+      <div class="title2"><a href="#p2-4">Recycling plates</a></div>
+      <div class="title2"><a href="#p2-5">Kits</a></div>
+    <div class="title1"><a href="#p3">- Electrical modules</a></div>
+      <div class="title2"><a href="#p3-1">Reagent auto-dispensing module</a></div>
+      <div class="title2"><a href="#p3-2">Reagent auto-release module</a></div>
+      <div class="title2"><a href="#p3-3">High-precision electrical signal detection module</a></div>
+    <div class="title1"><a href="#p4">- Procedure of using</a></div>
+    <div class="title1"><a href="#p5">- Precautions</a></div>
+    <!-- <div class="title1"><a href="#p6">- Cost*</a></div> -->
+  </div>
+
+  <div class="contentbox">
+    <div class="part">
+      <div class="s1">
+        <a name="p1" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">Overview</div>
+        </h2>
+        <p class="underh2">
+          At present, the diagnosis of heart disease is mainly carried out through screening through clinical symptoms, physical examination, etc., and diagnosis is made through electrocardiogram (ECG). However, these methods have the disadvantages of low timeliness, cumbersome and complex operation, the need for professional personnel, and the need for separate long-term monitoring. Therefore, in order to achieve the purpose of early detection and early treatment and make up for some shortcomings of traditional methods, we need to seek a more rapid and convenient detection method to achieve the effect of general investigation and early detection. To this end, we have designed and developed an electrically inductive rapid diagnostic device, which is a microfluidic biochip packaged in the form of a test strip, which requires only a drop of blood to complete the diagnosis, and outputs an electrical signal via Bluetooth to show the risk of disease and the type of disease on your mobile phone. The entire diagnostic process is non-invasive and very fast, allowing a large number of people to be screened for heart disease in a short period of time.
+        </p>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/hardware/1.png')}}" style="width: 50%; background-color: white;" class="pic-decoration">
+        </div>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/hardware/2.png')}}" style="width: 50%; background-color: white;" class="pic-decoration">
+        </div>
+      </div>
+    </div>
+    
+    <div class="part">
+      <div class="s1">
+        <a name="p2" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">Design</div>
+        </h2>
+        <p class="underh2">The whole hardware is divided into three modules: a lancing 
+        pen, a diagnostic kit and a kit.</p>
+        <p class="underh2">After the user collects blood, the blood sample enters the preliminary mixing chamber and mixes with the buffer, the electric valve at the 
+        connection between the mixing chamber and the biochip is opened, the sample enters the chip for testing, and the eluent enters the chip after the detection is completed, and the detection circuit is turned on for electrical signal analysis, and is uploaded to the user terminal at the same time. After a certain number of uses, the user can pull out the recycling plate for recycling. The whole 
+        process is quick and convenient, and the user can provide an accurate diagnostic report in a short time.</p>
+        
+        <a name="p2-1" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Blood pen</div>
+        </h3>
+        <p class="underh3">It is mainly composed of blood collection pen cap, blood collection needle and safety helmet, blood collection needle holder, pen plug, release button, spring lever, etc. It has an adjustable puncture depth gear device, which can adjust the puncture depth according to the user's skin needs (the higher the progression, the stronger the pain), and the disposable lancet is assembled first when used, and the blood collection can be completed by pressing the release button.</p>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/hardware/3.png')}}" style="width: 50%; background-color: white;" class="pic-decoration">
+        </div>
+
+        <a name="p2-2" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Test cassette</div>
+        </h3>
+        <p class="underh3">The appearance of the overall device is triangular prism-shaped, an elliptical blood collection point and a start button are arranged on the inclined plane, a reagent bin is arranged on the side, and the internal structure is shown in the figure below, and the blood collection point and the preliminary mixing bin are connected by a capillary tube to form a local siphon system that is convenient for sucking blood into the preliminary mixing bin; The preliminary mixing chamber is connected with the reagent compartment and the biological monitoring chip respectively, and the connecting ports are equipped with electric valves, which are opened and closed regularly according to the diagnostic time for releasing reagents; The biochip is slope-shaped, which is conducive to the uniform distribution of reagents; A waste liquid recovery plate is arranged under the chip, and the recovery plate can be extracted for recycling after a certain number of uses; At the bottom of the diagnostic box is an integrated circuit board, which is used to control the automatic operation of the diagnostic box.</p>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/hardware/2.png')}}" style="width: 50%; background-color: white;" class="pic-decoration">
+        </div>
+
+        <a name="p2-3" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Biochips</div>
+        </h3> 
+        <p class="underh3">It is a microfluidic biochip, which is encapsulated in the form of a test strip, with a layered design as shown in the figure below, and the top layer is a protective layer: it is used to isolate dust pollution; The second layer is the siphon layer: it is composed of hydrophilic substances and constitutes a local siphon system, which facilitates the uniform distribution of 
+        blood samples on the chip; The third layer is the microarray aptamer layer: for rapid detection of blood samples; The fourth layer is a carbon-silver bioelectrode layer, which is used to conduct electrical signals; The fifth layer is the PEC base plate.</p>
+        <p class="underh3">Considering the influence of red blood cells in the blood on the diagnosis, the electrode structure is designed as five electrodes, and the HCT calibration electrode is added to eliminate the interference of blood cells in the diagnosis to the greatest extent through the analysis of conductivity.</p>
+        <p class="underh3">The main working parts are the reference electrode, the working electrode and the on-electrode: the reference electrode is not in contact with the aptamer reaction site and is used to provide a constant potential, and 
+        the working electrode and the on-electrode are used to detect the electrical signal change of the aptamer reaction site. The electrode distribution is roughly divided into four intervals according to the needs of the aptamer response site distribution, which can detect different kinds of targets respectively, so as to achieve rapid screening of a variety of cardiac diseases.</p>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/hardware/4.png')}}" style="width: 50%; background-color: white;" class="pic-decoration">
+        </div>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/hardware/5.JPEG')}}" style="width: 50%; background-color: white;" class="pic-decoration">
+        </div>
+
+        <a name="p2-4" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Recycling plates</div>
+        </h3> 
+        <p class="underh3">In consideration of biosecurity considerations, we have set up recovery plates to prevent contamination of the environment by blood and reagents. The recovery plate is placed underneath the chip and has a square shape in the shape of a square slot. When the test is over, the electric valve at the end of the chip opens to release the detection reagent, which is accepted by the recovery plate. A certain amount of sodium polyacrylate is placed in the recovery plate, which absorbs water and gels, reducing the risk of blood samples and reagents spilling during recovery.</p>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/hardware/2.png')}}" style="width: 50%; background-color: white;" class="pic-decoration">
+        </div>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/hardware/5.png')}}" style="width: 50%; background-color: white;" class="pic-decoration">
+        </div>
+
+        <a name="p2-5" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Kits</div>
+        </h3> 
+        <p class="underh3">We will provide three diagnostic reagents in a medical package that requires the user to store at 4°C. After the reagents in the reagent warehouse are exhausted, users need to add reagents by themselves.</p>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="s1">
+        <a name="p3" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">Electrical modules</div>
+        </h2>
+        <p class="underh2">In order to realize the hardware requirements of miniaturization, integration and automation, we have designed three electrical modules: automatic reagent dispensing, automatic reagent release, and high-precision electrical signal detection.</p>
+
+        <a name="p3-1" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Reagent auto-dispensing module</div>
+        </h3>
+        <p class="underh3">
+          In order to realize the automatic dispensing of reagents, we designed an automatic piston in the reagent chamber, which consists of an electric actuator and a plastic platform, which controls the platform to descend the specified distance. The reagent chamber is connected to the preliminary mixing chamber, and the platform descends to press the reagent into the mixing chamber, so as to achieve the purpose of automatic quantitative dispensing. This instrument requires a total of three detection reagents, so we have designed three reagent bins to be connected to the mixing bin. In order to prevent accidental mixing of reagents during storage due to improper user handling, we have installed an electric valve at the connection port.
+        </p>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/hardware/m1.jpg')}}" style="width: 80%; background-color: white;" class="pic-decoration">
+        </div>
+
+        <a name="p3-2" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Reagent auto-release module</div>
+        </h3>
+        <p class="underh3">
+          The entire diagnostic process requires two elutions, for which we have designed an automatic reagent release module. It is composed of a stepper motor, a telescopic rod and a lifting platform, and the telescopic rod is driven by the rotation of the stepper motor to work, so as to realize the automatic lifting of the lifting platform. After the initial mixing of the blood sample, the No. 1 valve is opened, and the blood sample enters the chip, and after a period of time, the No. 2 valve opens the blood sample to release, and at the same time, the eluent enters the chip from the reagent compartment for the first elution, and the electrical signal detection is turned on, and the No. 1 valve is opened again after the detection is completed, and the eluent enters the chip, and the valve is closed after the elution is completed, and the diagnosis is completed. The motor code is as follows.
+        </p>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/hardware/2.jpg')}}" style="width: 50%; background-color: white;" class="pic-decoration">
+        </div>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/hardware/3.jpg')}}" style="width:70%; background-color: white;" class="pic-decoration">
+        </div>
+
+        <a name="p3-3" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">High-precision electrical signal detection module</div>
+        </h3>
+        <p class="underh3">
+          In order to achieve miniaturization and high accuracy of electrical signal detection equipment, we found an open-source potentiostat for radiochemical detection of smartphonesWEED This project uses cyclic voltammetry to monitor the electrical signals generated on the biochip in real time, and the device integrates the following components: BLE microcontroller (which contains a 32-bit ARM processor), memory and peripheral components such as BLE for communication, I2 for C-bus interface with DAC, digital output for switching, and conversion time of 70 μs 10-bit ADC for measuring the input signal. ), dual-channel digital-to-analog converter (DAC), filter, five-electrode potentiostat, 3.7V power supply. The circuit diagram is as follows. The five-electrode chip is connected to UWED, which is connected to a smartphone via BLE, and the software program in the smartphone controls the experimental protocol, processes, visualizes, and stores the data, and transmits it to the cloud.
+        </p>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/hardware/4.jpg')}}" style="width: 80%; background-color: white;" class="pic-decoration">
+        </div>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/hardware/5.jpg')}}" style="width: 100%; background-color: white;" class="pic-decoration">
+        </div>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="s1">
+        <a name="p4" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">Procedure of using</div>
+        </h2>
+        <p class="underh2">The whole testing device is equipped with a painless blood collection pen, a small test box and three types of detection reagents, when using painless blood collection, after the blood collection is completed, the blood sample collection is completed at the designated position of the test box, the detection switch is turned on, and the test results can be queried on the mobile phone after waiting for ten to fifteen minutes.</p>
+        <p class="underh2">When the number of uses reaches the rated number of times, the user needs to manually add the detection reagent, and the addition method is as follows: open the reagent addition ports on both sides of the test box, add the exclusive detection reagent, and cover the reagent back to cover it.</p> 
+        <div class="hardw_img">
+          <img src="{{ url_for('static', filename = 'svgs/description/a4.png')}}" alt=" ">
+        </div>
+      </div>
+    </div>
+
+    <div class="part">
+      <div class="s1">
+        <a name="p5" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">Precautions</div>
+        </h2>
+        <p class="underh2">When this instrument is not working, the user needs to store it together with the diagnostic reagent in a 4°C environment, and take it out when it needs to be used.</p>
+      </div>
     </div>
   </div>
 </div>
 
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr>
-    <p>In addition to encouraging teams to work with DNA parts and build biological devices in the lab, iGEM also encourages other types of technical solutions for synthetic biology. This can include physical devices (hardware) related to robotic assembly, microfluidics, low-cost measurement devices, to name a few examples. There are many exciting opportunities for hardware innovation in synthetic biology.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="http://2018.igem.org/Team:Valencia_UPV/Hardware">2018 Valencia UPV</a></li>
-      <li><a href="http://2018.igem.org/Team:Unesp_Brazil/Hardware">2018 Unesp Brazil</a></li>
-      <li><a href="https://2019.igem.org/Team:BIT/Hardware">2019 BIT</a></li>
-      <li><a href="https://2019.igem.org/Team:Bielefeld-CeBiTec/Hardware">2019 Bielefeld CeBiTec</a></li>
-      <li><a href="https://2019.igem.org/Team:Nanjing-China/Hardware">2019 Nanjing China</a></li>
-      <li><a href="https://2020.igem.org/Team:Vilnius-Lithuania/Hardware">2020 Vilnius Lithuania</a></li>
-      <li><a href="https://2020.igem.org/Team:Aachen/Hardware">2020 Aachen</a></li>
-      <li><a href="https://2020.igem.org/Team:ZJUT_China_B/Hardware">2020 ZJUT China B</a></li>
-    </ul>
-  </div>
-</div>
+<script src="{{ url_for('static', filename = 'dp.js') }}"></script>
 
 {% endblock %}
