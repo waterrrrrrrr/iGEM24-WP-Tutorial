@@ -40,6 +40,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{{ url_for('pages', page='description') }}">Description</a></li>
             <li><a class="dropdown-item" href="{{ url_for('pages', page='engineering') }}">Engineering</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='experiment') }}">Experiment</a></li>
             <li><a class="dropdown-item" href="{{ url_for('pages', page='hardware') }}">Hardware</a></li>
             <li><a class="dropdown-item" href="{{ url_for('pages', page='implementation') }}">Implementation</a></li>
             <li><a class="dropdown-item" href="{{ url_for('pages', page='model') }}">Model</a></li>
@@ -49,8 +50,16 @@
         </li>
 
         <!---- HUMAN PRACTICES ---->
-        <li class="nav-item">
-          <a class="nav-link" href="{{ url_for('pages', page='human-practices') }}">Human Practices</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Human Practices
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='education') }}">Education</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='entrepreneurship') }}">Entrepreneurship</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('pages', page='integrated-human-practice') }}">Integrated Human Practice</a></li>
+            
+          </ul>
         </li>
 
       </ul>
