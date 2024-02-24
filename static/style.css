@@ -2,6 +2,10 @@ body {
     /* padding-top: 56px;  */
     background-color: #202632;
 }
+.pagebody {
+    /* 计算不包括滚动条的宽度 */
+    width: calc(100% - 7px);
+}
 .left-aligned { margin-left: auto; }
 /* .bg-dark { background-color: rgba(60, 73, 96, 0.6) !important; } */
 .bg-hero { background-color: #45b06cff; }
@@ -27,6 +31,25 @@ a {
 strong{
     color: #75BC8D;
 }
+
+
+ ::-webkit-scrollbar {
+    width: 7px; /* 设置滚动条宽度 */
+    height: 7px;
+}
+
+/* 定制滚动条轨道 */
+ ::-webkit-scrollbar-track {
+    /* 隐藏滚动条的轨道 */
+    background: transparent; /* 轨道背景色 */
+}
+
+/* 定制滚动条滑块 */
+ ::-webkit-scrollbar-thumb {
+    background: #8A8A8A; /* 滑块颜色 */
+    border-radius: 10px;
+}
+
 /* footer */
 .box0 {
     display: flex; 
