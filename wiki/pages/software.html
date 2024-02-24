@@ -1,35 +1,209 @@
 {% extends "layout.html" %}
   
 {% block title %}Software{% endblock %}
-{% block lead %}Software in iGEM should make synthetic biology based on standard parts easier, faster, better or more accessible to our community.{% endblock %}
+<!-- {% block lead %}Describe how and why you chose your iGEM project.{% endblock %} -->
 
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Software Tool</h4>
-      <p>Regardless what's the topic, iGEM projects often create or adapt computational tools to move the bigger project forward. Because they are born out of a direct practical need, these software tools (or new computational methods) can even prove surprisingly useful for others. Without necessarily being big or complex, they can make the crucial difference to a project's success. This award tries to find and honor such "nuggets" of computational work. To be eligible, your software has to be documented and made available under an OSI-approved open source license. Teams nominating themselves for this prize must host the source code of their software on the dedicated repository on iGEM's GitLab.</p>
-      <p>To compete for the Best Software Tool prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2023 Awards Page</a> for more information.</p>
+<!-- CSS -->
+<link href="{{ url_for('static', filename = 'cont-page.css')}}" rel="stylesheet">
+
+<!-- Main Part -->
+<a name="top"></a>
+
+<div class="cont-title-box">
+  <!-- <div class="cont-title-word">{{ self.title() }}</div> -->
+  <img src="{{ url_for('static', filename = 'svgs/software.png')}}" alt="content's title" class="cont-title-pic">
+</div>
+
+<div class="back-box">
+  <a href="#top">
+    <img src="{{ url_for('static', filename = 'svgs/back2top.svg')}}" alt=" " class="back2top">
+  </a>
+</div>
+
+<div class="pagebody">
+  <div class="menubox">
+    <div class="title0">{{ self.title() }}</div>
+    <div class="title1"><a href="#p1">- Overview</a></div>
+    <div class="title1"><a href="#p2">- On the medical worker side</a></div>
+    <div class="title2"><a href="#p2-1">Available Function</a></div>
+    <div class="title2"><a href="#p2-2">Key Features</a></div>
+    <div class="title2"><a href="#p2-3">UI Elements</a></div>
+    <div class="title2"><a href="#p2-4">Data usage of the project</a></div>
+    <div class="title2"><a href="#p2-5">Outlook of the web app</a></div>
+    <div class="title1"><a href="#p3">- On the patient side</a></div>
+      <div class="title2"><a href="#p3-1">Quick to Download</a></div>
+      <div class="title2"><a href="#p3-2">User-friendly UI design</a></div>
+      <div class="title2"><a href="#p3-3">Privacy concern</a></div>
+  </div>
+
+  <div class="contentbox">
+    <div class="part">
+      <div class="s1">
+
+        <a name="p1" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">Overview</div>
+        </h2>
+        <p class="underh2">The software engineering is mainly carried out from the following two directions: On the medical worker side, a web app “BioProtoType” is developed to verify the usability of Telepathy kit; On the patient side, an Android/iOS downloadable software for collecting hardware medical data is designed.</p>
+        
+      </div>
+    </div>
+    
+    <div class="part">
+      <div class="s1">
+        <a name="p2" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">On the medical worker side</div>
+        </h2>
+        <p class="underh2">BioProtoType is a versatile statistical computing tool that integrates methods such as data visualization and hypothesis testing. The software utilizes clinical statistical methods to provide accurate and insightful visualizations to validate the usability of the wet laboratory product Telepathy Kit. At the same time, the software retains more room for future development (such as linked database, K8S deployment, sequencing, etc.).</p>
+
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/soft/1.png')}}" style="width: 70%; background-color: white;" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            logo of web app
+          </div>
+        </div>
+
+        <a name="p2-1" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Available Function</div>
+        </h3>
+        <p class="underh3">Confussion Matrix: validate the utility of Telepathy by compare its diagnosis with known result and compute common statistical values(Sensitivity & Specificity).</p>
+        <p class="underh3">Kaplan-Meier Method: predict the survival timeline of those using telepathy and traditional diagnosis method, compare and discover the advantages of telepathy over traditional diagnostic methods</p>
+        <p class="underh3">Log-Rank Test: integrated in the module 'Survival Prediction' 
+        with Kaplan-Meier Method, act as the patch of Kaplan-Meier Method in the situation of similar survival timeline</p>
+        
+        <a name="p2-2" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Key Features</div>
+        </h3>
+        <p class="underh3">Cache.  If same function meets the same data, it will output the result directly to speed calculation.</p>
+        <p class="underh3">Developed by the framework "Streamlit". Streamlit is an open-source Python library that makes it easy to create and share beautiful, custom web apps for machine learning and data science.</p>
+        <p class="underh3">Deployed by Docker. Docker is an open source application container engine based on the Go language and open source Apache2.0 protocol.Docker 
+        allows developers to package their applications and dependencies into a lightweight, portable container that can then be distributed to any popular Linux machine, as well as virtualization. Containers are completely sandboxed, there will be no interface between each other (similar to iPhone apps), and more importantly, the container performance overhead is extremely low.</p>
+        
+        <a name="p2-3" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">UI Elements</div>
+        </h3>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/soft/2.png')}}" style="width: 70%; background-color: white;" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            footer
+          </div>
+        </div>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/soft/3.png')}}" style="width: 40%; background-color: white;" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            selectbox
+          </div>
+        </div>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/soft/4.png')}}" style="width: 40%; background-color: white;" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            input_interface
+          </div>
+        </div>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/soft/5.png')}}" style="width: 100%; background-color: white;" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            expander & hyperlink
+          </div>
+        </div>
+
+        <a name="p2-4" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Data usage of the project</div>
+        </h3>
+        <p class="underh3">The docker container occupies 1.8GB</p>
+        <p class="underh3">The web app occupies approximately 44MB of running memory</p>
+        <p class="underh3">The  source file consists of 1000+ lines  https://github.com/Xspielberg/BioProtoType/tree/main</p>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/soft/6.png')}}" style="width: 40%; background-color: white;" alt=" " class="pic-decoration">
+          <!-- <div class="img_descr">
+            expander & hyperlink
+          </div> -->
+        </div>
+
+        <a name="p2-5" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Outlook of the web app</div>
+        </h3>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/soft/7.png')}}" style="width: 100%; background-color: white;" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            home (more in .pdf)
+          </div>
+        </div>
+
+      </div>
+    </div>
+  
+    <div class="part">
+      <div class="s1">
+        <a name="p3" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">On the patient side</div>
+        </h2>
+        <p class="underh2">In order to cooperate with the work of Hardware and search for data sources for BioProtoType, we designed an Iot-based software "Futuria", which is connected to the Telepathy kit via Bluetooth, receives the data transmitted by the detection box in real time and performs algorithm processing, and finally presents the visual disease analysis results. To provide a basis for further medical help, doctors can also conduct relevant clinical analysis based on the data collected in the cloud.</p>
+        
+        <a name="p3-1" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Quick to Download</div>
+        </h3>
+        <p class="underh3">Android/iOS converts the apk into a QR code for others to scan and download. The QR code will only appear in physical form with our hardware to prevent potential cyberattack risks. More info in https://fir.im/</p>     
+        
+        <a name="p3-2" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">User-friendly UI design</div>
+        </h3>
+        <p class="underh3">Considering that middle-aged and elderly people are the main audience of the kit, our software adopts barrier-free design in the UI design</p>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/soft/9.png')}}" style="width: 100%; background-color: white;" alt=" " class="pic-decoration">
+          <!-- <div class="img_descr">
+            home (more in .pdf)
+          </div> -->
+        </div>
+
+        <a name="p3-3" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Privacy concern</div>
+        </h3>
+        <p class="underh3">To solve the privacy problems, we designed a system based on the combination of full-homomorphic encryption algorithm and AES algorithm to 
+        realize the storage, management, retrieval and calculation of medical data related to the kit.</p>
+        <p class="underh3">The data retrieval calculation method based on full-homomorphic encryption technology can directly perform basic calculation on the encrypted data without decrypting it into plain text, which not only ensures the security of user data, but also ensures that the server can directly operate the stored data ciphertext, balancing the relationship between ensuring the security of user data in the cloud storage system and serving cloud computing. The combination of AES encryption algorithm also effectively makes up for the low encryption rate of all homomorphic encryption algorithm</p>
+
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/safety/2.png')}}" style="width: 80%; background-color: white;" class="pic-decoration">
+          <div class="img_descr">architecture</div>
+        </div>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/safety/3.png')}}" style="width: 80%; background-color: white;" class="pic-decoration">
+          <div class="img_descr">full-homomorphic encryption algorithm</div>
+        </div>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/safety/4.png')}}" style="width: 100%; background-color: white;" class="pic-decoration">
+          <div class="img_descr">key producer</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:Sydney_Australia/Software">2019 Sydney Australia</a></li>
-      <li><a href="https://2019.igem.org/Team:SMMU-China/Software">2019 SMMU China</a></li>
-      <li><a href="https://2019.igem.org/Team:Grenoble-Alpes/Software">2019 Grenoble Alpes</a></li>
-      <li><a href="https://2020.igem.org/Team:DTU-Denmark/Software">2020 DTU Denmark</a></li>
-      <li><a href="https://2020.igem.org/Team:GunnVistaPingry_US/Software">2020 GunnVistaPingry US</a></li>
-      <li><a href="https://2020.igem.org/Team:Rochester/Software">2020 Rochester</a></li>
-    </ul>
-  </div>
-</div>
+
+<script src="{{ url_for('static', filename = 'dp.js') }}"></script>
 
 {% endblock %}
