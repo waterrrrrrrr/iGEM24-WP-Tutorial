@@ -131,8 +131,17 @@
     padding: 1rem 1.5rem 1rem 0;
 }
 
-strong{
-    color: #75BC8D;
+.selfmade-table {
+    margin: 1.5rem;
+    /* border-radius: 10px; */
+    overflow-x: scroll;
+
+}
+table th,td {
+    border:solid 1px #7a8085;;
+}
+tr > td:first-child {
+    font-weight: bold;
 }
 
 @media all and (max-width:850px){
