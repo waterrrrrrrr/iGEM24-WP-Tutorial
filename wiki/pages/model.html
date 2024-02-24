@@ -7,7 +7,12 @@
 
 <!-- CSS -->
 <link href="{{ url_for('static', filename = 'cont-page.css')}}" rel="stylesheet">
-
+<style>
+  li {
+    margin-left: 1.4rem;
+    margin-top: 0.8rem;
+  }
+</style>
 <!-- Main Part -->
 <a name="top"></a>
 
@@ -57,7 +62,8 @@
         <p class="underh2">
           The process of nucleic acid detection can be idealized as consisting of two processes: the synthesis of dsDNA and the capture of charged MB.
         </p>
-        
+
+        <a name="p2-1" style="position: relative; top: -12vh;"></a>
         <h3>
           <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
           <div class="cont-h2">Synthesis of dsDNA</div>
@@ -72,10 +78,7 @@
           </div>
         </div>
 
-        <h3>
-          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
-          <div class="cont-h2">Binding reaction：</div>
-        </h3>
+        <p class="underh3"><strong>Binding reaction:</strong></p>
         <p class="underh3">
           In the binding reaction, we use Freundlich adsorption equation to describe the strength of connection between DNA single strands, in order to simulate their opening and closing.
         </p>
@@ -97,14 +100,33 @@
         <p class="underh3">
           The basic implementation of the Freundlich adsorption equation function is:
         </p>
-        <div class="equation-box">
-          <img src="{{ url_for('static', filename = 'svgs/model/3.svg')}}" alt=" " class="equation">
+        <div class="codebox">
+          <pre class="underh3">
+freundlich_eq = @(params, c) params(1) * c.^params(2);
+          </pre>
         </div>
         <p class="underh3">
           But in our project, we need to consider the effects of temperature and pH on the binding strength of the bases. According to literature research, both temperature and pH show a linear relationship with the parameter (K_c) in the Freundlich adsorption equation within certain limits. Therefore, if we control the experimental conditions within these limits, we can simply assume a linear relationship. Hence, we need to include a parameter correction term in the code.
         </p>
         <div class="codebox">
-        <pre class="underh3">
+          <pre class="underh3">
+compute_K = @(base_K, temperature, pH) base_K * exp(-0.08 * (1 / (8.314 * temperature)) + 0.45 * (pH - 7));
+          </pre>
+        </div>
+        <p class="underh3">This function takes the base constant base_K, temperature, and pH values as parameters and returns the calculated K_c for the matching reaction. In the calculation of the matching reaction, k_bind is multiplied by H2_concentration and H3_concentration, and adjusted through the call to compute_K to account for the effects of temperature and pH on the matching rate.</p>      
+        <p class="underh3">This implementation allows the matching rate constant k_bind to be dynamically adjusted based on the actual experimental conditions of temperature and pH, leading to a more accurate simulation of the dynamic behavior of the matching reaction. Due to the minimal changes in temperature and pH during the reaction, using molecular dynamics simulation methods would not only be time-consuming but also yield little benefit, hence employing a simple Freundlich adsorption equation model already achieves a good simulation level.</p>      
+        <p class="underh3">Visualization results:</p>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/model/6.png')}}" style="width: 50%; background-color: white;" class="pic-decoration">
+        </div>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/model/5.png')}}" style="width: 50%; background-color: white;" class="pic-decoration">
+        </div>
+
+        <p class="underh3"><strong>Open reaction:</strong></p>
+        <p class="underh3">The modeling approach for opening reaction involves simulating the twisting and opening process of DNA strands, and estimating the opening rate constant for subsequent ODE equation establishment. Firstly, we need to know the initial twist angle and centripetal force of the H1 molecule, data that can be obtained through experimental methods such as X-ray crystallography. Secondly, we can use the dipole approximation model to estimate the twist spring constant and open spring constant of this double-stranded structure. Based on this data, we can begin to simulate the opening process of this double-stranded structure.</p>
+        <div class="codebox">
+          <pre class="underh3">
 % 模拟DNA链扭转和打开过程
 for i = 2:N_steps
     % 添加扰动项
@@ -121,30 +143,156 @@ for i = 2:N_steps
         break;
     end
 end
-        </pre>
-      </div>
-        <div class="equation-box">
-          <img src="{{ url_for('static', filename = 'svgs/model/4.svg')}}" alt=" " class="equation">
+          </pre>
         </div>
+        <p class="underh3">We use a for loop to simulate the continuous traversal of this process, and the termination result is generally considered to be complete when the twist angle of the double-stranded structure exceeds 15~20 degrees, as 
+        indicated in the literature. Random perturbation terms are consistently added to the model to make it closer to reality.</p>
+        <p class="underh3">
+          Here are some assumptions:
+          <ul>
+            <li>In the dipole approximation model, we assume that the torsional spring constant of DNA is the sum of the torsional spring constants of each base pair, treating the entire DNA molecule as a whole. The rationale behind this simplification is that DNA molecules are relatively large, and the interactions between base pairs can produce synergistic effects on the overall molecule. The torsional spring constant of DNA originates from the interactions between base pairs, and the dipole approximation model assumes that these interactions are uniform across the entire molecule. Therefore, the sum of the torsional spring constants can be regarded as the torsional spring constant of the DNA as a whole. This assumption simplifies the complex molecular structure, making the problem easier to handle.</li>
+            <li>DNA molecules exhibit non-uniformity and require segmented consideration of their torsional spring constants and opening spring constants.</li>
+            <li>The binding strength of A-T and C-G pairs are different and mutually influences each other.</li>
+          </ul>
+        </p>
+        <div class="codebox">
+          <pre class="underh3">
+% DNA链的参数
+L = 100; % DNA链长度，单位为基对数
+num_segments = 10; % 将DNA链分为的段数
+segment_length = L / num_segments; % 每个段的长度
+% 不同碱基对的扭转弹簧常数
+k_twist_A_T = 1.5; % 举例：腺嘌呤-胸腺嘧啶
+k_twist_C_G = 2.0; % 举例：胞嘧啶-鸟嘌呤
+% 扭转弹簧常数的估计
+k_twist_estimate = 0;
+% 相互作用弹簧系数
+k_interaction_A_T = 0.2; % 举例：腺嘌呤-胸腺嘧啶之间的相互作用
+k_interaction_C_G = 0.3; % 举例：胞嘧啶-鸟嘌呤之间的相互作用
+for i = 1:num_segments
+    % 根据碱基对类型分配不同的扭转弹簧常数
+    if rand() < 0.5
+        local_k_twist = k_twist_A_T;
+    else
+        local_k_twist = k_twist_C_G;
+    end
+    
+    % 考虑相互作用弹簧系数
+    if i > 1
+        % 累积相互作用弹簧系数，不考虑第一个段
+        local_k_twist = local_k_twist + k_interaction_A_T; % 举例：假设只有 A-T 对之间有相互作用
+    end
+    
+    k_twist_estimate = k_twist_estimate + local_k_twist;
+end
+% 打开弹簧常数的估计
+k_open_estimate = 0.5 * k_twist_estimate;
+          </pre>
+        </div>
+        <p class="underh3">The specific DNA sequence is not determined, so random selection is used as a substitute.</p>
+        <p class="underh3">Due to the lack of data on the initial twist angle and centripetal force of the H1 molecule, the code is currently unable to visualize reasonably valid results.</p>
+        <p class="underh3"><strong>Cascade reaction:</strong></p>
+        <p class="underh3">Due to the continuous stacking of H2 and H3 in the cascade reaction, it is possible to ensure that the detection of all miRNAs uses the same H2 and H3 by controlling the nucleic acid fragments. Additionally, the final 
+        product of the HCR amplification is not clearly defined in the literature. Therefore, the rate of the cascade reaction will be determined through experimental methods by measuring the reaction rates at different temperatures and pH levels. Experimental data will be used to fit the parameters of the kinetic mode. For example, using the lsqcurvefit function in Matlab to obtain the optimal reaction rate constants.</p>
 
-        <div class="equation-box">
-          <img src="{{ url_for('static', filename = 'svgs/model/4.svg')}}" alt=" " class="equation">
+        <a name="p2-2" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+          <div class="cont-h2">The capture efficiency of MB</div>
+        </h3>
+        <p class="underh3">I used two different models for the modeling of this section separately.</p>
+        <p class="underh3"><strong>One: Using the Michaelis-Menten Saturation Model to model the capture efficiency of MB.</strong></p>
+        <p class="underh3">The Michaelis-Menten Saturation Model is a relatively simple and classic model, its equation is:</p>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/model/eq1.png')}}" style="width: 20%; background-color: white;" class="pic-decoration">
         </div>
-
-        <p class="underh3">
-          This function takes the base constant base_K, temperature, and pH values as parameters and returns the calculated K_c for the matching reaction. In the calculation of the matching reaction, k_bind is multiplied by H2_concentration and H3_concentration, and adjusted through the call to compute_K to account for the effects of temperature and pH on the matching rate.
-        </p>
-        <p class="underh3">
-          This implementation allows the matching rate constant k_bind to be dynamically adjusted based on the actual experimental conditions of temperature and pH, leading to a more accurate simulation of the dynamic behavior of the matching reaction. Due to the minimal changes in temperature and pH during the reaction, using molecular dynamics simulation methods would not only be time-consuming but also yield little benefit, hence employing a simple Freundlich adsorption equation model already achieves a good simulation level.
-        </p>
-        <p class="underh3">
-          Visualization results:
-        </p>
-        <div class="hardw_img">
-          <img src="{{ url_for('static', filename = 'svgs/model/6.png')}}" alt=" ">
+        <p class="underh3">The reason we chose this equation as the model for this process is mainly based on the following reasons:</p>
+        <ul>
+          <li>Saturation effect: The Michaelis-Menten model considers the saturation phenomenon of enzyme activity with increasing substrate concentration. In our context, this can reflect whether the capture efficiency of dsDNA tends to saturate as the MB concentration increases.</li>
+          <li>Applicability: The model performs well in explaining saturation effects caused by interactions between substrates and enzymes or other ligands. This is consistent with our desire to understand the interaction between MB and dsDNA.</li>
+          <li>Interpretability of parameters: The parameters of the Michaelis-Menten model, such as V_max and K_m, have biological or chemical interpretability, providing useful information about the characteristics of the capture system.</li>
+        </ul>
+        <p class="underh3">We are interested in the variation of MB capture efficiency on dsDNA at different MB concentrations. We aim to achieve optimal results with the lowest economic cost, so I introduced a weight factor in the code. An exponential decay function is used to reduce the weight of MB quantity when calculating the total capture amount. By adjusting experimental parameters, we hope to find the optimal MB concentration, where the concentration of MB is relatively low and its capture amount is relatively large.</p>
+        <div class="codebox">
+          <pre class="underh3">
+% 计算捕获量并可视化
+for j = 1:length(MB_density_range)
+    MB_density = MB_density_range(j);
+    
+    % 初始化捕获效率数组
+    capturing_efficiency = zeros(1, num_dsDNA);
+    
+    % 计算每个dsDNA位置下的MB浓度和捕获效率
+    for i = 1:num_dsDNA
+        dsDNA_position = dsDNA_positions(i);
+        % 计算每个dsDNA上的MB浓度
+        MB_concentration = MB_density * exp(-dsDNA_position * tan(deg2rad(slope_angle)) * flow_velocity);
+        % 计算捕获效率（Michaelis-Menten Saturation Model）
+        saturation_params = [0.5, 0.1]; % Michaelis-Menten Saturation Model的参数
+        capturing_efficiency(i) = michaelis_menten_saturation_model(saturation_params, MB_concentration);
+    end
+    
+    % 计算总捕获量（对所有dsDNA位置求和），应用权重因子
+    captured_amount(j) = sum(capturing_efficiency .* exp(-weight_factor * MB_density));
+end
+% 寻找捕获量接近最大值的MB浓度
+[max_captured_amount, max_captured_index] = max(captured_amount);
+optimal_MB_density = MB_density_range(max_captured_index);
+          </pre>
         </div>
-        <div class="hardw_img">
-          <img src="{{ url_for('static', filename = 'svgs/model/5.png')}}" alt=" ">
+        <p class="underh3">The visualization of the results after setting the parameters is:</p>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/model/7.png')}}" style="width: 60%; background-color: white;" class="pic-decoration">
+        </div>
+        <p class="underh3"><strong>Two: Monte Carlo simulation based on Markov chain.</strong></p>
+        <p class="underh3">MCMC has many advantages in this simulation process, such as avoiding local optima, which is advantageous for this more complex situation; 
+        enhancing the robustness of the model, providing some resistance to possible noise and uncertainty; and MCMC can adapt to different distributions, making it more effective for simulating the complex model of capturing MB on DNA double strands.</p>
+        <p class="underh3">In this code, I use the Metropolis-Hastings algorithm to roam the parameter space and record the capture efficiency of each iteration. Finally, the results are demonstrated by calculating the average capture amount and plotting the relationship between the average capture amount and the MB concentration.</p>
+        <div class="codebox">
+          <pre class="underh3">
+% MCMC模拟
+for i = 1:num_iterations
+    % 随机选择新的参数
+    new_params = params + 0.1 * randn(size(params));
+    
+    % 计算新旧参数下的捕获效率
+    capturing_efficiency_current = zeros(1, length(MB_density_range));
+    capturing_efficiency_new = zeros(1, length(MB_density_range));
+    
+    for j = 1:length(MB_density_range)
+        MB_density = MB_density_range(j);
+        
+        capturing_efficiency_current(j) = michaelis_menten_saturation_model(params, MB_density);
+        capturing_efficiency_new(j) = michaelis_menten_saturation_model(new_params, MB_density);
+    end
+    
+    % 计算新旧参数下的总捕获量
+    captured_amount_current = sum(capturing_efficiency_current);
+    captured_amount_new = sum(capturing_efficiency_new);
+    
+    % Metropolis-Hastings接受准则
+    acceptance_ratio = min(1, captured_amount_new / captured_amount_current);
+    
+    % 决定是否接受新参数
+    if rand() < acceptance_ratio
+        params = new_params;
+    end
+    
+    % 记录捕获量，忽略燃烧期
+    if i > burn_in
+        captured_amount(i - burn_in, :) = capturing_efficiency_current;
+    end
+end
+% 计算平均捕获量
+mean_captured_amount = mean(captured_amount);
+% 寻找捕获量接近最大值的MB浓度
+[max_mean_captured_amount, max_captured_index] = max(mean_captured_amount);
+optimal_MB_density = MB_density_range(max_captured_index);
+          </pre>
+        </div>
+        <p class="underh3">Visualization results:</p>
+        <div class="inserteq">
+          <img src="{{ url_for('static', filename = 'svgs/model/8.png')}}" style="width: 60%; background-color: white;" class="pic-decoration">
         </div>
       </div>
     </div>
@@ -154,22 +302,27 @@ end
         <a name="p3" style="position: relative; top: -14vh;"></a>
         <h2>
           <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
-          <div class="cont-h1">The capture efficiency of MB</div>
+          <div class="cont-h1">Protein detection model introduction</div>
         </h2>
-        <p class="underh3">
-          I used two different models for the modeling of this section separately.
-        </p>
-          
-        <a name="p3-1" style="position: relative; top: -12vh;"></a>
-        <h3>
-          <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
-          <div class="cont-h2">One: Using the Michaelis-Menten Saturation Model to model the capture efficiency of MB.</div>
-        </h3>
-        <p class="underh3">
-          The Michaelis-Menten Saturation Model is a relatively simple and classic model, its equation is:
+        <p class="underh2">
+          The H1 opening reaction, H2 and H3 cascade reactions, and MB capture in protein detection are roughly similar to nucleic acids, with minimal impact on the reaction rate. The focus should be on the binding reaction rate of proteins with H1. This process is very similar to the capture process of MB, involving the recognition and binding between DNA and proteins. Therefore, it is only necessary to modify some parameters of the Michaelis-Menten kinetic model based on experimental data to achieve this.
         </p>
       </div>
     </div>
+    
+    <div class="part">
+      <div class="s1">
+        <a name="p4" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">Using machine learning to compute the correlation between targets and diseases.</div>
+        </h2>
+        <p class="underh2">
+          Since the data in the database is not currently available publicly, we envision that once the product is implemented, if users are willing to share their data, we can utilize machine learning to establish the correlation between various targets and diseases. The data we require includes the disease conditions of different patients and the levels of various targets detected. By inputting a large amount of this data along with corresponding disease conditions into the computer, we can calculate the correlation of each target by assigning weights. With this correlation data, users can more accurately determine their probability of having a certain disease after testing.
+        </p>
+      </div>
+    </div>
+    
 
 </div>
 
