@@ -40,7 +40,7 @@ a {
 strong{
     color: #75BC8D;
 }
-
+p { font-size: 1rem; line-height: 170%; margin: 1rem 0 1rem 2.4rem;}
 
  ::-webkit-scrollbar {
     width: 7px; /* 设置滚动条宽度 */

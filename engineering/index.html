@@ -13,7 +13,7 @@
     <!-- Custom CSS -->
     <link href="../static/style.css" rel="stylesheet">
 
-    <title>Engineering Success | ZJU-China - iGEM WP1</title>
+    <title>Engineering | ZJU-China - iGEM WP1</title>
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -88,8 +88,8 @@
     <div class="container h-100">
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
-          <h1 class="display-4 text-white mt-5 mb-2">Engineering Success</h1>
-	        <p class="lead mb-5 text-white-50">Demonstrate engineering success in a part of your project by going through at least one iteration of the engineering design cycle.</p>
+          <h1 class="display-4 text-white mt-5 mb-2">Engineering</h1>
+	        <p class="lead mb-5 text-white-50">Describe how and why you chose your iGEM project.</p>
         </div>
       </div>
     </div>
@@ -100,17 +100,515 @@
   <div>
     
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Silver Medal Criterion #1</h4>
-      <p>Demonstrate engineering success in a part of your project by going through at least one iteration of the engineering design cycle. This achievement should be distinct from your Contribution for Bronze.<p>
-      <p>If you plan to show engineering success by creating a new Part that has been shown to work as expected, you must document your contribution on the Part's Main Page on the <a href="http://parts.igem.org/Main_Page">Registry</a> for your team to be eligible for this criteria.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2023 Medals Page</a> for more information.</p>
+<!-- CSS -->
+<link href="../static/cont-page.css" rel="stylesheet">
+<style>
+</style>
+<!-- Main Part -->
+<a name="top"></a>
+
+<div class="cont-title-box">
+  <!-- <div class="cont-title-word">Engineering</div> -->
+  <img src="../static/svgs/engineering.png" alt="content's title" class="cont-title-pic">
+</div>
+
+<div class="back-box">
+  <a href="#top">
+    <img src="../static/svgs/back2top.svg" alt=" " class="back2top">
+  </a>
+</div>
+
+<div class="pagebody">
+  <div class="menubox">
+    <div class="title0">Engineering</div>
+    <div class="title1"><a href="#p1">- Target Detection</a></div>
+      <div class="title2"><a href="#p1-1">Iteration 1-Basic responding structure</a></div>
+      <div class="title2"><a href="#p1-2">Iteration 2-Optimization: H2/H3 uniformity</a></div>
+    <div class="title1"><a href="#p2">- Amplification for both responders</a></div>
+      <div class="title2"><a href="#p2-1">1 Design</a></div>
+      <div class="title2"><a href="#p2-2">2 Build</a></div>
+    <div class="title1"><a href="#p3">- Array Fabrication</a></div>
+      <div class="title2"><a href="#p3-1">1 Design</a></div>
+      <div class="title2"><a href="#p3-2">2 Build</a></div>
+    <div class="title1"><a href="#p4">- Related Protocol</a></div>
+      <div class="title2"><a href="#p4-1">1 Target Detection</a></div>
+      <div class="title2"><a href="#p4-2">2 Amplification for both responders</a></div>
+      <div class="title2"><a href="#p4-3">3 Array Fabrication</a></div>
+    <div class="title1"><a href="#p5">- Reference</a></div>
+  </div>
+
+  <div class="contentbox">
+
+    <!-- 1 -->
+    <div class="part">
+      <div class="s1">
+        <a name="p1" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="../static/svgs/title_logo.svg" alt=" " class="titlelogo">
+          <div class="cont-h1">Target Detection</div>
+        </h2>
+
+        <a name="p1-1" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="../static/svgs/subtitle_logo.svg" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Iteration 1-Basic responding structure</div>
+        </h3>
+        <p class="underh3"><strong>Construction of Stem-ring Thio-aptamer for miRNA Detection</strong></p>
+        <p class="underh3"><strong>1 Design</strong></p>
+        <p class="underh3">Our inspiration primarily stems from "An enzyme-free electrochemical sandwich DNA assay based on the use of hybridization chain reaction and gold nanoparticles: application to the determination of the DNA of Helicobacter pylori." The paper utilizes a hybridization chain reaction (HCR) to capture target miRNA by binding with stem-loop adapters, leading to signal amplification. Simultaneously, the enrichment of methylene blue (MB) as an electrochemical detection substance not only amplifies the miRNA signal but also converts chemical signals into electrical signals. Additionally, through a paper titled "Combinatorial Selection and Edited Combinatorial Selection of Phosphorothioate Aptamers Targeting Human Nuclear Factor-κB RelA/p50 and RelA/RelA," we learned that phosphorothioate aptamers exhibit higher affinity and stability compared to traditional nucleic acid aptamers. Therefore, we aim to utilize phosphorothioate nucleotides to construct appropriate stem-loop phosphorothioate adapters to meet our miRNA detection needs.</p>
+        <p class="underh3"><strong>2 Build</strong></p>
+        <p class="underh3">In the RNA detection section, we first designed an initiator molecule, H1, which binds to the target RNA molecule and exposes a single-stranded DNA segment to trigger the hybridization chain reaction (HCR). Based on the principle of HCR technology, we designed DNA hairpin structures, H2 and H3, capable of undergoing cascade reactions to generate long-chain DNA structures with cleavage sites, thereby achieving nucleic acid signal amplification. Finally, due to its low toxicity and excellent electrochemical activity, methylene blue (MB) was chosen as a suitable indicator molecule. MB exhibits strong binding affinity to the double-stranded DNA (dsDNA) structures formed during the cascade reaction, causing changes in the electrical signal by embedding into the groove structure of the elongated double helix. The magnitude of the electrical signal correlates linearly within a certain range with the concentration of the target molecules. Therefore, we decided to utilize MB as the signaling molecule.</p>
+        <p class="underh3"><strong>1） Arrangement form</strong></p>
+        <p class="underh3">Initially, we considered the possibility of cyclic utilization of H1, H2, and H3 components. Inspired by Figure 1, we decided to flatten the spherical structure into a plane and divide it into MxN grids similar to those depicted in Figure 2. Each grid contains one immobilized H1 molecule and a 1:1 ratio 
+        of H2 to H3 (determined experimentally to optimize signal amplification). Each grid operates independently, allowing for a linear relationship between signal magnitude and target molecule concentration.</p>
+        <div class="insertimgnew">
+          <img src="../static/svgs/e/1.png" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            Figure.1 Hybridization Chain Reactions(HCR) on 3D Nanointerfaces of Magnetic Particles, adopted from [13]
+          </div>
+        </div>
+        <div class="insertimg">
+          <img src="../static/svgs/e/2.png" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            Figure.2 immobilized form, drawn by our member
+          </div>
+        </div>
+        <p class="underh3">However, upon further consideration, we recognized that a free-floating liquid-phase reaction might be more efficient and feasible. Consequently, we opted to immobilize H1 on an Au electrode via Au-S bonds and perform cascade reactions by introducing a free solution of H2 and H3 in a 1:1 ratio to achieve signal amplification.</p>
+        <p class="underh3"><strong>2）reusable implementation</strong></p>
+        <p class="underh3">After reviewing the literature and engaging in discussions, we proposed three approaches:</p>
+        <p class="underh3">a） Heating:</p>
+        <p class="underh3">By applying heat, we disrupt the hydrogen bonds between complementary sequences, unraveling the double-stranded structure for repeated use.</p>
+        <p class="underh3">b） pH Adjustment:</p>
+        <p class="underh3">In the design of DNA hairpin structures, we introduced a pH-sensitive intramolecular triplex structure. This structure remains stable under acidic conditions but dissociates under alkaline conditions. This design allows the 
+        hairpin to undergo structural changes in different pH environments. The hairpin structure includes a toehold region that can initiate DNA hybridization chain reactions. Under alkaline conditions, the toehold region is exposed, initiating the reaction.</p>
+        <div class="insertimg">
+          <img src="../static/svgs/e/3.png" style="width: 80% !important;" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            Figure.3 pH adjustment, adopted from [15]
+          </div>
+        </div>
+        <p class="underh3">c） Construction of gHCR and tHCR using strand displacement techniques:</p>
+        <div class="insertimgnew">
+          <img src="../static/svgs/e/4.png" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            Figure.4 strand displacement, adopted from [16]
+          </div>
+        </div>
+        <p class="underh3">After comprehensive consideration of factors such as product cost and technical difficulty, we decided to adopt pH adjustment for cyclic utilization. By adding alkaline buffer to initiate the reaction and subsequently adding acidic buffer after completion, we disrupt the DNA hybridization structure, thereby terminating the reaction and allowing the DNA strands to separate again. This method enables the reuse of DNA molecules, achieving the goal of repeated use.</p>
+        <p class="underh3">Then, ultimately considering cost concerns and the complexity 
+        of the experiment, we chose to directly add urea to the elution buffer for the removal of HCR products and target RNA molecules.</p>
+        <p class="underh3"><strong>3）The structure of H1</strong></p>
+        <p class="underh3">At first, we considered using the cDNA method as shown in Figure 5 to design the inducer H1.</p>
+        <div class="insertimgnew">
+          <img src="../static/svgs/e/5.png" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            Figure.5 cDNA structure, adopted from [4]
+          </div>
+        </div>
+        <p class="underh3">However, considering the stability of the structure, we decided to combine the bulbous structure in Figure 6 with the response mode from "A reusable ratiometric electrochemical biosensor on the basis of the binding" to obtain the stem-loop structure with triple-chain and adapter as shown in Figure 8.</p>
+        <div class="insertimgnew">
+          <img src="../static/svgs/e/6.png" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            Figure.6 bulb-like structure, adopted from [17]
+          </div>
+        </div>
+        <div class="insertimgnew">
+          <img src="../static/svgs/e/7.png" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            Figure.7 response mode, adopted from [5]
+          </div>
+        </div>
+        <div class="insertimgnew">
+          <img src="../static/svgs/e/8.png" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            Figure.8 stem-loop structure with triple-chain and adapter, drawn by our member
+          </div>
+        </div>
+        <p class="underh3">The triple-chain structure is primarily regulated by the system's pH, and it can only be opened in an alkaline environment. The adapter partially complements the sequence of the stem-loop structure, and only when the target RNA is present, the target RNA will bind to the adapter, opening the bulbous structure. Only when the system is alkaline and the target RNA is present can the bulbous structure expose nucleotide sequences capable of inducing cascading reactions for H2 and H3, enabling subsequent reactions. Moreover, after the reaction is completed, the addition of acidic buffer and corresponding adapter allows the reaction to be repeated.</p>
+        <p class="underh3">However, considering that the free adapter needs to be additionally added and the possibility of false-positive results caused by the fixed H1 structure not forming a stem-loop structure and existing in the form of long chains, We decided to construct the structure as shown in Figure 10, inspired by Figure 9 from the literature. The green part is fixed on the electrode surface, the red part is the HCR reaction site hidden by the hairpin structure, and the blue part is the binding site of the target RNA. When the target RNA binds to the blue region, it will open the yellow hairpin structure and expose the HCR reaction region of the red part (as shown in Figure 11), thus proceeding to the next step of signal amplification with H2 and H3.</p>
+        <div class="insertimgnew">
+          <img src="../static/svgs/e/9.png" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            Figure.9 target-responding stem-loop structure, adopted from [19]
+          </div>
+        </div>
+        <div class="insertimgnew">
+          <img src="../static/svgs/e/10.png" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            Figure.10 H1 structure, drawn by our member
+          </div>
+        </div>
+        <div class="insertimgnew">
+          <img src="../static/svgs/e/11.png" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            Figure.11 reaction process, drawn by our member
+          </div>
+        </div>
+        <p class="underh3"><strong>4）The structure of H2 and H3</strong></p>
+        <p class="underh3">The HCR probes (H2 and H3) were designed to fold as a hairpin structure with 5′- or 3′-overhang, respectively (Fig. 1B). These overhang sequences were called toehold sequence, which functioned to initiate the hybridization cascade of the DNA hairpin probes to the single-stranded target. The key principle of the probe design was that the probes had to be stable enough to retain their hairpin structure when the target was absent. While, in the presence of the target, the hairpin probes should be flexible to initiate the hybridization cascade. The lower free energy resulted in the more metastability of the hairpin structure. The stability and flexibility of the hairpin probes could be increased by adjusting the length of the stem and the toehold domains.</p>
+        <div class="insertimgnew">
+          <img src="../static/svgs/e/12.png" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            Figure 12. H2 and H3 structure
+          </div>
+        </div>
+        <p class="underh3"><strong>3 Test</strong></p>
+        <p class="underh3">The stability and flexibility of hairpin probes can be increased by adjusting the lengths of the stem and loop domains. Predictions of hairpin probe structure and hybridization complexes are made using the NUPACK Web program. Subsequently, gel electrophoresis analysis and LFIA are used to verify that the H1 structure can trigger subsequent reactions upon binding with target RNA and to validate the Limit of Detection (LOD) of the nucleic acid detection platform.</p>
+
+        <div>
+          <p class="underh3"><strong>Construction of Thio-aptamer Switch for Protein Detection</strong></p>
+          <p class="underh3"><strong>Cycle 1</strong></p>
+          <p class="underh3"><strong>1 Design</strong></p>
+          <p class="underh3">Our initial inspiration came from an article called <strong>"Universal Design of Structure-Switching Aptamers with Signal Reporting Functionality"</strong> In this paper, the researchers designed an aptamer that binds to the DNA enzyme which can break down hydrogen peroxide. And the inspiration of the design is based on the variable domain and fixed domain of antibodies. When the aptamer binds to a specific target substance, the structure of the DNA enzyme will be destroyed and the catalase activity will be lost. At the same time, we combined the HCR principle in the miRNA detection method, and thought that the signal of the target protein could be amplified and converted into an electrical signal in this way. Therefore, we hope that through similar method, we can screen for a sequence that can bind to a target protein and expose a specific H2 single-stranded DNA, thereby triggering an HCR reaction. Similar to the aptamers used for miRNA detection, we also hope to design suitable thioaptamers for protein detection to improve the binding ability and stability of the aptamers.</p>
+          <p class="underh3"><strong>2 Build</strong></p>
+          <p class="underh3">For the initial screening, we first designed H1', H2 'and H3' orthogonal to H1, H2 and H3 of the nucleic acid detection module with the help of the computer, and designed three fixed sequences required by the protein aptamer according to the H1' designed by us. Each fixed sequence is at both ends of the aptamer. There is a complementary region of 30bp between the two ends of the aptamer, and the last two ends of the aptamer contain primer sequences for amplification. At the same time, a random sequence of 30~80bp is randomly generated between the fixed sequences at both ends.</p>
+          <p class="underh3">In addition, to further determine the length of the appropriate random sequence, based on the fixed sequence of the designed H1 '+ primers, we introduce 30,35,40,... The T sequence was repeated for 80bp, and the effect of random sequence length on the off state of the aptamer was detected by enzyme-linked immunoreaction to determine the length of two random sequences for screening.</p>
+          <p class="underh3">In the end, we screened 20 aptamers using the traditional selex method.</p>
+          <div class="insertimg">
+            <img src="../static/svgs/e/13.png" alt=" " class="pic-decoration">
+            <div class="img_descr">
+              Figure.13 Computer-aided design for HCR
+            </div>
+          </div>
+          <div class="insertimgnew">
+            <img src="../static/svgs/e/14.png" alt=" " class="pic-decoration">
+            <div class="img_descr">
+              Figure.14 aptamer interacted with protein, drawn by our member
+            </div>
+          </div>
+          <p class="underh3"><strong>3 Test</strong></p>
+          <p class="underh3">We initially identified two random sequence regions of appropriate length by ELISA, and obtained the secondary structure of the aptamer by circular dichroism (CD) spectroscopy. Finally, ITC and ELISA were used to confirm the affinity and specificity of the aptamer to the target protein, as well as its binding ability to specific H2' in the presence or absence of the target protein.</p>
+          <p class="underh3"><strong>4 Learn</strong></p>
+          <p class="underh3">The aptamers we designed need to pass the traditional SELEX method, which is more complex and has a long cycle, which is not conducive to short-term igem projects. Therefore, we hope to use a new screening method that is simple and short cycle to meet our requirements for aptamer design. </p>
+          <p class="underh3"><strong>Cycle 2</strong></p>
+          <p class="underh3"><strong>1 Design</strong></p>
+          <p class="underh3">The SELEX method we want to use is derived from the article <strong>"Formaldehyde Cross-Linking-Assisted Phase Separation for Protein Aptamer Selection"</strong>. The FCPS method described in this paper is simple to operate, does not require expensive equipment, and is more efficient than the traditional SELEX method for aptamer screening. Therefore, we will use this approach to screen the thioaptamers that we need.</p>
+          <p class="underh3"><strong>2 Build</strong></p>
+          <p class="underh3">First, we constructed conventional nucleic acid libraries into thionucleotide libraries using Taq enzyme and dNTP (αS) (see Engineering-Amplification section for more details). Then, FCPS technology was further used to firmly bind the thionucleic acids that can interact with target proteins using formaldehyde, and phase separation was performed by phenol and chloroform based on difference in solubility with ssDNA, followed by elution to remove the nucleic acids that could not bind to the target. Finally, the screened nucleic acids were amplified by PCR and the above process was repeated to obtain nucleic acid aptamers with better binding ability to the target.</p>
+          <div class="insertimgnew">
+            <img src="../static/svgs/e/15.png" alt=" " class="pic-decoration">
+            <div class="img_descr">
+              Figure.15 process of FCPS assay, adopted from [2]
+            </div>
+          </div>
+          <p class="underh3"><strong>3 Test</strong></p>
+          <p class="underh3">As in the first round, we will obtain the secondary structure of the aptamer by circular dichroism (CD) spectroscopy, and further confirm the affinity and specificity of the aptamer to the target protein, as well as its ability to bind to a specific H2' in the presence or absence of the target protein by using ITC method and enzym-linked immunoreaction.</p>
+          <p class="underh3"><strong>4 Learn</strong></p>
+          <p class="underh3">After optimizing SELEX strategy, we turned to simplify the whole system in consideration of requirement to use different H2/H3 for different targets, which indicated to modify the sequence of aptamers. </p>
+        </div>
+
+        <div>
+          <p class="underh3"><strong>HCR Parameter Testing and Function Confirmation</strong></p>
+          <p class="underh3"><strong>1 Design</strong></p>
+          <p class="underh3">As mentioned previously, we used HCR method for signal amplification in detection. Since our HCR assay used different sequences and lengths of H2/H3 with hairpin DNA available in literature, we needed to test different temperatures and pH to determine the optimal HCR conditions for subsequent experiments and to confirm that the HCR would function properly. In addition, the rate parameters obtained during the process were used to calculate the optimal conditions in products.</p>
+          <p class="underh3">For HCR detection, responders were fixed on the gold electrode. Hairpin DNA for HCR and electroactive substance MB were mixed as reaction agent, added onto the electrode, and incubated for a certain period of time, during which the electrical signal was measured at the electrochemical workstation. The HCR cascade rate under different conditions was thus calculated.</p>
+          <p class="underh3"><strong>2 Build</strong></p>
+          <p class="underh3">First, the required circuit was printed on the chip using SPE method and blocking material, and the chip obtained was detected directly at the electrochemical workstation as a tri-electrode system. More details are described in the Array Fabrication section..</p>
+          <p class="underh3">The sulfhydrated responder DNA was incubated and fixed on the gold electrode, and the electrode was blocked with MCH. The chip was connected to the electrochemical workstation with an adapter and DPV was carried out. Experiments were carried out under different conditions and incubation time points to compare the signal strength. Detailed experiment setup is shown here——</p>
+          <div class="insertimg">
+            <img src="../static/svgs/e/t3.png" alt=" " class="pic-decoration">
+          </div>
+        </div>
+
+        <!-- 1-2 -->
+        <div>
+          <a name="p1-2" style="position: relative; top: -12vh;"></a>
+          <h3>
+            <img src="../static/svgs/subtitle_logo.svg" alt=" " class="subtitlelogo">
+            <div class="cont-h2">Iteration 2-Optimization: H2/H3 uniformity</div>
+          </h3>
+
+          <div>
+            <p class="underh3"><strong>Overview</strong></p>
+            <p class="underh3">Because of sequence requirement of HCR, we had to use different H2/H3 according to the methods described previously. That led to the complexity of our reaction buffer, and raised unknown orthogonal risks. To solve this problem, here we put forward a model, which is composed of linker, target responding sites and HCR responding sites. We need further practical efforts to confirm whether this machine can function properly. </p>
+            <p class="underh3"><strong>Sequence Design</strong></p>
+            <p class="underh3"><strong>1 Design</strong></p>
+            <p class="underh3"><strong>1.1 target responding sites</strong></p>
+            <p class="underh3">This site depends on the target: aptamer for protein, and partly complementary sequence for RNA. </p>
+            <p class="underh3"><strong>1.2 HCR responding sites</strong></p>
+            <p class="underh3">We plan to use part of the unwind toehold of target responding sites to unwind the hairpin at 3’end, exposing the terminus to initiate HCR cascade. </p>
+            <p class="underh3"><strong>1.3 the expected responding process of the structure</strong></p>
+            <p class="underh3">We may use NUPACK for reaction analysis if condition allowed. </p>
+            <div class="insertimg">
+              <img src="../static/svgs/e/t2.png" alt=" " class="pic-decoration">
+            </div>
+            <p class="underh3"><strong>1.3.1 original structure</strong></p>
+            <div class="insertimgnew">
+              <img src="../static/svgs/e/16.png" alt=" " class="pic-decoration">
+              <div class="img_descr">
+                Figure.16 original structure of H1, made by DNAMAN
+              </div>
+            </div>
+            <p class="underh3">Mark this structure as H1. Mark those hairpins in it as A and B from 5’ to 3’ end. 
+              More details are described in the table above. </p>
+            <p class="underh3"><strong>1.3.2 after RNA recognition</strong></p>
+            <div class="insertimgnew">
+              <img src="../static/svgs/e/17.png" alt=" " class="pic-decoration">
+              <div class="img_descr">
+                Figure.17 H1 after hybridization with target RNA, made by DNAMAN
+              </div>
+            </div>
+            <p class="underh3">Mark the new hairpin as C. The sequence combined with RNA target is indicated as the poly-N chain located 5’ of C.</p>
+            <p class="underh3">C is formed when A is unwound by combination of RNA (aptamer with protein in the condition of protein detection). The sequence “GTTTG GGCATG” is exposed 
+            then, and replace the duplex structure of B, unwinding it and forming C.</p>
+            <p class="underh3"><strong>1.3.3 HCR initiation</strong></p>
+            <p class="underh3">Structure of H2 is as below——</p>
+            <div class="insertimg">
+              <img src="../static/svgs/e/18.png" alt=" " class="pic-decoration">
+              <div class="img_descr">
+                Figure.18 structure of H2, made by DNAMAN
+              </div>
+            </div>
+            <p class="underh3">Structure of H3 is as below——</p>
+            <div class="insertimg">
+              <img src="../static/svgs/e/19.png" alt=" " class="pic-decoration">
+              <div class="img_descr">
+                Figure.18 structure of H3, made by DNAMAN
+              </div>
+            </div>
+            <p class="underh3">HCR is initiated by the terminus of H1, unwinding H2 and then H3. HCR is carried out continuously in this way. </p>
+            <p class="underh3"><strong>2 Build</strong></p>
+            <p class="underh3">We may order products from related corporations and amplify them with methods described in Engineering-Amplification for both responders section below. For function confirmation, we may use FRET assay to check if the hairpin unwinds.</p>  
+            <p class="underh3">The FRET assay will be carried out by Cy3/5 as fluorophore and Nitro methyl red(shown as “R”) as quencher and the fluorescence will be checked by PAGE after incubation at room temperature. The modified sequence will be as blow (the same example as in 1.3 above)——</p>
+            <p class="underh3">TTTTTTTT NNNNNN GAATTAA TTCGG GTTTG Cy3 GGCATG CCGAA TTAATTC TTTTTTTTTT CATGCC R CAAAC TATACT GTTTG Cy5</p>
+            <p class="underh3">Lanes are shown below——</p>
+            <div class="insertimg">
+              <img src="../static/svgs/e/t3.png" alt=" " class="pic-decoration">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 2 -->
+    <div class="part">
+      <div class="s1">
+        <a name="p2" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="../static/svgs/title_logo.svg" alt=" " class="titlelogo">
+          <div class="cont-h1">Amplification for both responders</div>
+        </h2>
+        <a name="p2-1" style="position: relative; top: -12vh;"></a>
+
+        <p class="underh3"><strong>1 Design</strong></p>
+        <p class="underh3">In order to achieve mass production of stable products, we constructed a thionucleic acid library for the target response elements used, which was divided into the following steps theoretically: ① oligonucleotide chains of different lengths were synthesized by phosphoramidite triester synthesis; ② sulfide oligonucleotides; 
+          ③ amplification of thiooligonucleotide chains to construct a thionucleic acid library</p>
+          <p class="underh3">In the construction of our experiment, sulfide oligonucleotides are only used as the optimization step. For the amplification part, we combine RCA and NEAR.</p>
+          <p class="underh3">We obtained the circular ssDNA of the target nucleic acid sequence 
+          by padlock probes. The specific process was to make the linear DNA form a ring-like structure in the presence of the corresponding designed target sequence, and T4 ligase was used for specific linking to form the primer ring template.</p>
+          <p class="underh3">After we obtained the cyclic ssDNA of the target nucleic acid sequence by locking cyclization, we added the corresponding primer P1, and then linearly amplified the cyclic template under the catalysis of Phi 29 DNA polymerase at a constant temperature of 30~37℃ to obtain a long strand ssDNA that periodically repeated the target sequence. The number of cycles could be determined by controlling the time of RCA. DNA polymerase uses this long chain as a template and adds primer P2 to catalyze dNTPs to synthesize many dsDNA molecules. We added the recognition site of endonuclease to the target sequence, which means that after the target ssDNA sequence is cut by endonuclease, the synthetic dsDNA molecule continues to polymerize and extend from the 3 'end of the tear at the incision by using dNTPs as raw material through the action of polymerase to replace the equipotential DNA strand. The cut ssDNA also serves as a template for dsDNA synthesis, thus forming a new complete DNA sequence containing the enzyme recognition site. The synthesized double strand is again recognized and cut by the 
+          nucleic acid endonuclide enzyme, and then begins the "polymerization-incising" cycle, 
+          generating a large number of displaced single strands of the target ssDNA, forming exponential amplification. Until the raw material is exhausted, all the target ssDNA is cut.</p>
+          <p class="underh3">The following is an example of the sequence design (all sequences are described as 5'-3')——</p>
+          <p class="underh3">Suppose we need to amplify the sequence X-M-Y, where X and Y indicate a short sequence of the beginning and the end respectively, X+M+Y indicates the ssDNA we need to amplify, and the “ ’ ”stands for the complementary strand:</p>
+          <div class="insertimg">
+            <img src="../static/svgs/e/t4.png" alt=" " class="pic-decoration">
+          </div>
+          <div class="insertimgnew">
+            <img src="../static/svgs/e/20.png" alt=" " class="pic-decoration">
+            <div class="img_descr">
+              Figure.20 DNA pattern, just for visualization, not actual length of strands, made by Snapgene
+            </div>
+          </div>
+        <a name="p2-2" style="position: relative; top: -12vh;"></a>
+
+        <p class="underh3"><strong>2 Build</strong></p>
+        <p class="underh3"><strong>2.1 vulcanize the oligonucleotide</strong></p>
+        <p class="underh3">The oligonucleotide is dissolved in a buffer solution with a pH generally between 7.0 and 8.0. A sulfhydration reagent, such as 2-mercaptoethyltriethoxysilane (TESPS), is added so that it reacts with the phosphate group in the oligonucleotide to form a thioether bond between the phosphate group and the sulfhydryl group. In the reacted product, unreacted mercapturization reagents and other impurities are removed by washing and centrifugation to obtain the thionucleotide.</p>
+        <p class="underh3"><strong>2.2 amplification</strong></p>
+        <p class="underh3">We synthesized the corresponding thionucleotide probe according to the amplified object, constructed the circular ssDNA by locking cyclization, and amplified the target ssDNA with the corresponding RCA primer and NEAR primer. </p>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="part">
+      <div class="s1">
+        <a name="p3" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="../static/svgs/title_logo.svg" alt=" " class="titlelogo">
+          <div class="cont-h1">Array Fabrication</div>
+        </h2>
+
+        <a name="p3-1" style="position: relative; top: -12vh;"></a>
+        <p class="underh3"><strong>1 Design</strong></p>
+        <p class="underh3">When constructing the detection array, we divide the targets into two categories: RNA and protein/peptide. For RNA detection, we used RNA sequence-based 
+          switches based(see Design-RNA Detection section for more details). For protein/peptide detection, we use aptamer-based switches(see Design-Protein Detection section for more details). Both use HCR for signal amplification. We choose gold electrode for the array and immobilize probes by Au-S bonds between Au and sulfhydryl group. According to 
+          requirement of different experiments, the circuit pattern is printed on our chip with 
+          required conductive material as ink, and then it is packaged and assembled, and then fit into the device after being prepared respectively.</p>
+          <p class="underh3">Notably, for iteration, the Au-Se bond with stronger stability can 
+          be used instead. But here in Engineering section, Au-S bond, which is more common, is 
+          still used for design.</p>
+          <p class="underh3">We design three stages of experiments: surface modification, concentration test and effect confirmation. Experiments are planned as follows: modified electrode electrochemical characteristics verification based on by cyclic voltammetry, probe density assessment based on chronocoulometry, and the HCR self-assembly and orthogonality test based on agarose gel electrophoresis and electrochemical parameter measurement.</p>
+        
+        <a name="p3-2" style="position: relative; top: -12vh;"></a>
+        <p class="underh3"><strong>2 Build</strong></p>
+        <p class="underh3"><strong>2.1 to confirm the decoration on the surface</strong></p>
+        <p class="underh3">The electrochemical properties of the modified gold electrode surface were measured by cyclic voltammetry before and after the probe modification.([1]) This CV assay is carried out as follows at the electrochemical workstation and tested by the redox couple Fe(CN)(6). The CV peak current decreases continuously theoretically: ① bare gold electrode ② probes fixed ③ MCH incubated ④ targets incubated ⑤ HCR-based signal amplified</p>
+        <p class="underh3"><strong>2.2 amplification</strong></p>
+        <p class="underh3">We depend on electroactive material [Ru(NH(3))(6)](3+) to measure the density of probes immobilized on the surface of electrodes, and use chronocoulometry based on Cottrell equation. Details are described in Protocol section. </p>
+        <p class="underh3"><strong>2.3 to confirm the signal response</strong></p>
+        <p class="underh3">Fabricate tri-electrode system—respectively Au, Pt and Ag/AgCl—by SPE. Shape of masks is designed as the referred picture——</p>
+        <div class="insertimg">
+          <img src="../static/svgs/e/21.png" alt=" " class="pic-decoration">
+          <div class="img_descr">
+            Figure.21 SPE working pattern, adopted from [6]
+          </div>
+        </div>
+        <p class="underh3"><strong>2.3.1 without the array</strong></p>
+        <p class="underh3">To test the effect of HCR self-assembling signal amplification in response to the target, we design agarose gel electrophoresis(raise one of the targets as an example)——</p>
+        <div class="insertimg">
+          <img src="../static/svgs/e/t5.png" alt=" " class="pic-decoration">
+        </div>
+        <p class="underh3">*Marker: for size(bp) reference; H1: target response hairpin; H1’: 
+          other response hairpins; H2/H3: target HCR hairpins; H2’/H3’: other HCR hairpins</p>  
+          <p class="underh3">For protein-aptamer interaction, use ELISA instead of PAGE and experiment groups shown above.</p>
+          <p class="underh3">Targets, H1/H2/H3, other samples and their H2/H3 are added in order with or without pH activation to test if the reaction goes as expected. If HCR happens, nucleic acid of larger size can be seen compared to corresponding control group.</p>
+          <p class="underh3"><strong>2.3.2 with the array</strong></p>
+          <p class="underh3">In the response assay, we set our experiment plan as follows——</p>
+          <div class="insertimg">
+            <img src="../static/svgs/e/t6.png" alt=" " class="pic-decoration">
+          </div>
+          <p class="underh3">According to the principle of HCR, we have two hairpin DNA, HP2 and HP3, for signal amplification. Fluorescence assay is achieved by Cy3-tagged HP2(532nm, green) and Cy5-tagged HP3(635nm, red). All four assays are carried out according to 
+            steps described in Protocol section.</p>
+            <p class="underh3">HCR hairpins and samples for different targets are loaded onto corresponding sites separately and activated by pH change to confirm if the system functions properly, and the mixture of them is loaded onto each site to confirm the orthogonality.</p>
+            <p class="underh3">We use fluorescence detection to see if the HP2 and HP3 assembled as expected, and work at electrochemical workstation to test the target response effects.</p>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="part">
+      <div class="s1">
+        <a name="p4" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="../static/svgs/title_logo.svg" alt=" " class="titlelogo">
+          <div class="cont-h1">Related Protocol</div>
+        </h2>
+        
+        <a name="p4-1" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="../static/svgs/subtitle_logo.svg" alt=" " class="subtitlelogo">
+          <div class="cont-h2">1 Target Detection</div>
+        </h3>
+        <p class="underh3">1.1 miRNA Detection</p>
+        <p class="underh3">1）HCR reaction</p>
+        <p class="underh3">Heat the working solutions of probes H1 and H2 separately to 95°C for 5 minutes. Then, cool the solutions to room temperature for 60 minutes before the experiment to allow the probes to fold into hairpin structures. In the HCR experiment, 
+        mix the H1 and H2 probe mixture with different concentrations (5, 10, 50, 100, 500 nM) of targets and reaction buffer. Incubate the HCR reaction at room temperature for a certain period of time.</p>
+        <p class="underh3">2）Gel electrophoresis analysis</p>
+
+        <p class="underh3">Fifteen microliters of the reaction were mixed with 2.5 μL of 6X gel loading dye (New England BioLabs, MA, USA) and analyzed by using 3% agarose gel electrophoresis in 1xTAE buffer (40 mM Tris acetate, 2.0 mM Na(2)EDTA, pH 8.5) with a constant voltage at 80 V for 40 min or 14% non-denaturing polyacrylamide gel electrophoresis (PAGE) in 1xTBE buffer (9 mM Tris−HCl, pH 7.9, 9 mM boric acid, and 0.2 mM EDTA) with constant voltage at 130 V for 120 min. The gel was stained with 1X SYBR Gold for 30 min and imaged under the UV light by G-box gel documentary (Syngene, MD, USA).</p>   
+        <p class="underh3">3)  LFIA</p>
+        <p class="underh3">LFIA device was composed of sample application pad, conjugate pad, 
+        nitrocellulose membrane (detection zone; test line and control line) and adsorption pad. Gold-nanoparticles (AuNPs) conjugated anti-biotin antibody was deposited on the conjugate pad to detect biotin-labeled HCR products. Anti-digoxigenin (DIG) antibody was 
+        located on the test line to capture DIG-labeled HCR products. Anti-mouse IgG was located on the control line to capture the excess AuNP conjugated anti-biotin antibody. Five microliters of the HCR reaction were mixed with 100 μL of LFIA diluent buffer containing 2% BSA and gently mixed. The sample was applied to the sample application area of LFIA device. The result displayed within 10–30 min. The intensity of the test line was measured by Image j program.</p>
+        <p class="underh3">1.2 Protein Detection</p>
+        <p class="underh3">1.2.1 Screening of thio-aptamers based on FCPS method</p>
+        <p class="underh3">Firstly, the ssDNA library that met the design requirements was obtained from the company. Subsequently, ssDNA libraries were constructed from traditional nucleic acid libraries into thio-ssDNA libraries using dNTP(αS) and Taq enzymes.The 
+        thio-ssDNA libraryconsisting of 5 nmol randomized oligonucleotides was used as an initial pool. For the common pressurizing program, 1 to 0.5 nmol amplified samples from previous pools were applied in turn. For an equal amount of reaction, 1 nmol of amplified product was used in each round. The annealing ssDNA pool was first incubated with proteins in binding buffer for 30 min, followed by cross-linking with 0.25% FA for 5 min, and terminating with glycine for 2 min. Then, a phenol/chloroform mixture was introduced to separate the reaction components into different phases after thoroughly vortexing and centrifuging at 13,000 g for 10 min. The uncross-linked ssDNA in the upper aqueous phase was removed, followed by supplementation with deionized water and next-phase separation. The process was repeated three times to purify the cross-linked adducts. Concentrations under vacuum and heating were utilized to remove the organic phase and release cross-linked ssDNA, respectively. Subsequently, the thio-ssDNA was amplified. The ssDNA was obtained via eluting with 200 mM NaOH and desalting with a NAP-5 column after capture by streptavidin-labeled sepharose beads. Finally, enrichment of the aptamer pool was carried out by high-throughput sequencing.</p>
+        <p class="underh3">1.2.2 Circular Dichroism to Define the Characteristics of the Aptamer Structure</p>
+        <p class="underh3">Aptamer structures interacting with or without proteins were studied by circular dichroism (CD) spectroscopy on a Chirascan V100, according to the manufacturer’s instructions. Care was taken to open nitrogen protection in advance and maintain it throughout the experimental process. All aptamers underwent annealing before detection. Aptamers were diluted to 1μM with binding buffer. All samples were scanned from 320 to 200 nm in a 1 mm, 400 μL quartz cuvette.</p>
+        <p class="underh3">1.2.3 ELISA</p>
+        <p class="underh3">Each well of the microtiter plate was coated with 3 μg Herceptin (HT) or other proteins and incubated at 4℃ overnight. The washing buffer used here was PBS, supplemented with 0.5% Tween-20 to eliminate nonspecific adsorption. After washing three times, the coated wells were blocked with 1% BSA at 37℃ for 1 h. Then, after annealing, the biotinylated aptamer was diluted with binding buffer and added to the wells to react at 37℃ and 150 rpm for 1 h. Besides, 100 μl of HRP (horseradish peroxidase)-conjugated streptavidin (1:1000) was added and incubated at 37℃ for 30 min, followed by washing seven times and treating with TMB. The absorbance of the samples was monitored and recorded by a microplate reader (BioTek Synergy H1, BioTek, USA) at 652 nm. Detection was performed with three parallel groups.</p>
+        <p class="underh3">1.2.4 ITC</p>
+        <p class="underh3">There are two pools in the microcalorimeter, one containing water as a reference pool and the other containing a sample. The microcalorimeter must keep the two pools at exactly the same temperature. The thermal device detects the temperature difference between the two pools when bonding occurs and feeds back to the heater, 
+        which compensates for this temperature difference and returns the two pools to the same temperature.</p>
+        <p class="underh3">We prepared the sample and syringe added the buffer to the sample, 
+        and added the reference substance and the substance to be measured to the syringe. The sample and syringe were placed into the ITC instrument and the temperature was controlled at a constant temperature. A reference substance was injected into the sample and the baseline value of the thermal effect signal is recorded. The substance to be measured was added to the sample cells and the change value of the thermal effect signal was recorded. The baseline value and change value of the thermal effect signal were repeatedly measured as above until the end of the measurement. Finally, thermodynamic parameters such as thermodynamic equilibrium constant, enthalpy change and entropy change were calculated according to the measured results.</p>
+        
+        <a name="p4-2" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="../static/svgs/subtitle_logo.svg" alt=" " class="subtitlelogo">
+          <div class="cont-h2">2 Amplification for both responders</div>
+        </h3>
+        <p class="underh3">2.1 Padlock Probe</p>
+        <p class="underh3">In a 200 ml centrifuge tube, 2 ml of 10×ligation buffer, 5 ml of 100 nM Padlock Probe, 2 ml of primer1 and 11 ml of nuclease-free water was added. The sample was denatured at 95℃ for 2 min and hybridization was performed at 37℃ for 10 min. After hybridization, 2 ml of 10 mM adenosine triphosphate (ATP) and 20U of T4 DNA ligase were added to the reaction. Ligation was performed at 37℃ for 30 min.</p>
+        <p class="underh3">2.2 NEAR assay</p>
+        <p class="underh3">After ligation, 3 ml of 10×Phi29 buffer, 0.5 ml of 10 mM dNTP mix, 
+        0.5 ml of 10 mg /ml bovine serum albumin (BSA) and 20U of Phi29 DNA polymerase were added to the reaction. Rolling circle amplification was performed at 37℃ for 2 h. Then a mixture of 100 nM Primer2 2ml and dNTP:Nt.BsmAI:Phi29=5uM:1U/ml:1U/ml was added, and 
+        the mixture reacted in a constant temperature incubator at 37°C for 2 hours. After heating denaturation, the products were quickly extracted.</p>
+        
+        <a name="p4-3" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="../static/svgs/subtitle_logo.svg" alt=" " class="subtitlelogo">
+          <div class="cont-h2">3 Array Fabrication</div>
+        </h3>
+        <p class="underh3">3.1 detection array fabrication</p>
+        <p class="underh3">With the help of the screen-printing machine, we printed the designed circuit on the chip, and thermosolidified it at 37℃. In our assay, we set the diameter of each detection site to 2mm.</p>
+        <p class="underh3">Notably, as for the conductive ink and tri-electrode system used in the assay, Ag was used as reference electrode and printed at the bottom, and after thermofixation, other electrodes and protective ink layer were printed on the surface as required.</p>
+        <p class="underh3">Before loading the probes, we polished gold electrodes with 1.0, 0.3, 0.05 mm alumina powder in turn until a mirror-like surface emerges. Rinse the electrode with Tris-HCl buffer, dry with nitrogen. Clean the gold electrodes electrochemically in a 0.5 M H(2)SO(4) solution at voltage range between -0.2 and +1.5 V until a stable characteristic voltammetric peak emerge.</p>
+        <p class="underh3">3.2 RNA and protein/peptide probe loading</p>
+        <p class="underh3">The probes were treated with isopyknic TCEP(20 mM) in PBS buffer(50 mM, pH 7.4) at 37℃ for 1h to cleave the disulfide bond. Then drop 5 ul of 0.5 μM probe on the gold electrodes surface for 30 min at room temperature and rinse electrodes with 10mM PBS buffer(pH 7.4) to remove excessive probes. Subsequently, add 5 μl of 1 mM MCH to the surface for 30min for blocking.</p>
+        <p class="underh3">3.3 RNA and protein/peptide detection assay</p>
+        <p class="underh3">Mix the sample and HCR probes and MB, and add 5μl of the mixture onto the surface of the gold electrodes. Incubate them at 37℃.</p>
+        <p class="underh3">3.4 density calculation assay</p>
+        <p class="underh3">Mix the sample and HCR probes and MB, and add 5μl of the mixture onto the surface of the gold electrodes. Incubate them at 37℃. </p>
+        <div class="inserteq">
+          <img src="../static/svgs/e/eq1.png" width="50%" class="pic-decoration">
+        </div>
+        <div class="inserteq">
+          <img src="../static/svgs/e/t7.png" width="80%" class="pic-decoration">
+        </div>
+        <p class="underh3">① Γ(0) can be determined from the difference in intercepts (Δint) at t=0 in the presence and absence of [Ru(NH(3))(6)](3+)</p>
+        <p class="underh3">② Γ(0) can be quantitative to the quantity of the immobilized DNA (Γ(DNA)) by dividing the number of bases in the single immobilized DNA strand——</p> 
+        <div class="inserteq">
+          <img src="../static/svgs/e/qu2.png" width="30%" class="pic-decoration">
+        </div>
+        <div class="inserteq">
+          <img src="../static/svgs/e/t7.png" width="80%" class="pic-decoration">
+        </div>
+
+        
+      </div>
+    </div>
+
+    <!-- 5. Reference -->
+    <div class="part">
+      <div class="s1">
+        <a name="p5" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="../static/svgs/title_logo.svg" alt=" " class="titlelogo">
+          <div class="cont-h1">Reference</div>
+        </h2>
+        <p class="quote">[1] Hualong Gao, Jiaoxing Zhao, et al. Universal Design of Structure-Switching Aptamers with Signal Reporting Functionality[J]. Analytical Chemistry, 2019, 91: 14514-14521.</p>
+        <p class="quote">[2] Jia Liu, Qiao Duan, et al. Formaldehyde Cross-Linking-Assisted Phase Separation for Protein Aptamer Selection[J]. Analytical Chemistry, 2023, 95: 6700-6708.</p>
+        <p class="quote">[3] Suzanne E. Bassett，et al. Combinatorial Selection and Edited Combinatorial Selection of Phosphorothioate Aptamers Targeting Human Nuclear Factor-κB RelA/p50 and RelA/RelA[J]. Biochemistry, 2004, 43: 9105-9115.</p>        
+        <p class="quote">[4] Zhang H, Ye S, Huang L, Fan S, Mao W, Hu Y, Yu Y, Fu F. An electrochemical biosensor for the detection of aflatoxin B1 based on the specific 
+        aptamer and HCR biological magnification. Anal Methods. 2022 Dec 22;15(1):99-108. doi: 10.1039/d2ay01682f. PMID: 36484245.</p>
+        <p class="quote">[5] Cui L, Lu M, Li Y, Tang B, Zhang CY. A reusable ratiometric 
+        electrochemical biosensor on the basis of the binding of methylene blue to DNA with alternating AT base sequence for sensitive detection of adenosine. Biosens Bioelectron. 2018 Apr 15;102:87-93. doi: 10.1016/j.bios.2017.11.025. Epub 2017 Nov 7. PMID: 29127900.</p>
+        <p class="quote">[6] Cinti S, Moscone D, Arduini F. Preparation of paper-based devices for reagentless electrochemical (bio)sensor strips. Nat Protoc. 2019 Aug;14(8):2437-2451. doi: 10.1038/s41596-019-0186-y. Epub 2019 Jul 3. PMID: 31270508.</p>
+        <p class="quote">[7] 丁香实验. 2023-07-21. protocol 分享｜等温滴定量热法(ITC). Retrieved from https://www.dxy.cn/bbs/newweb/pc/post/48437532</p>
+        <p class="quote">[8] Jain S, Dandy DS, Geiss BJ, Henry CS. Padlock probe-based rolling circle amplification lateral flow assay for point-of-need nucleic acid detection. Analyst. 2021 Jun 28;146(13):4340-4347. doi: 10.1039/d1an00399b. PMID: 34106115; PMCID: PMC8294176.</p>
+        <p class="quote">[9] Chen A, Gui GF, Zhuo Y, Chai YQ, Xiang Y, Yuan R. Signal-off Electrochemiluminescence Biosensor Based on Phi29 DNA Polymerase Mediated Strand Displacement Amplification for MicroRNA Detection. Anal Chem. 2015 Jun 16;87(12):6328-34. doi: 10.1021/acs.analchem.5b01168. Epub 2015 May 22. PMID: 25971336.</p>
+        <p class="quote">[10] Li M, Li YT, Li DW, Long YT. Recent developments and applications of screen-printed electrodes in environmental assays--a review. Anal Chim 
+        Acta. 2012 Jul 13;734:31-44. doi: 10.1016/j.aca.2012.05.018. Epub 2012 May 20. PMID: 22704470.</p>
+        <p class="quote">[11] Chenyang Mei, Luting Pan, Wenjin Xu, Hang Xu, Yuanyuan Zhang, Zhiying Li, Bin Dong, Xiangqing Ke, Colm McAlinden, Mei Yang, Qinmei Wang, Jinhai Huang. An ultrasensitive reusable aptasensor for noninvasive diabetic retinopathy diagnosis target on tear biomarker. Sensors and Actuators B: Chemical, Volume 345, 15 October 2021, 130398. doi: 10.1016/j.snb.2021.130398</p>
+        <p class="quote">[12] Phillips MF, Lockett MR, Rodesch MJ, Shortreed MR, Cerrina 
+        F, Smith LM. In situ oligonucleotide synthesis on carbon materials: stable substrates for microarray fabrication. Nucleic Acids Res. 2008 Jan;36(1):e7. doi: 10.1093/nar/gkm1103. Epub 2007 Dec 15. PMID: 18084027; PMCID: PMC2248760.</p>
+        <p class="quote">[13] Zhang H, Ye S, Huang L, Fan S, Mao W, Hu Y, Yu Y, Fu F. An 
+        electrochemical biosensor for the detection of aflatoxin B1 based on the specific aptamer and HCR biological magnification. Anal Methods. 2022 Dec 22;15(1):99-108. doi: 10.1039/d2ay01682f. PMID: 36484245.</p>
+        <p class="quote">[14] Oishi M, Juji S. Acceleration of DNA Hybridization Chain Reactions on 3D Nanointerfaces of Magnetic Particles and Their Direct Application in the Enzyme-Free Amplified Detection of microRNA. ACS Appl Mater Interfaces. 2021 Aug 4;13(30):35533-35544. doi: 10.1021/acsami.1c09631. Epub 2021 Jul 21. PMID: 
+        34286570.</p>
+        <p class="quote">[15] Prinzen AL, Saliba D, Hennecker C, Trinh T, Mittermaier A, 
+        Sleiman HF. Amplified Self-Immolative Release of Small Molecules by Spatial Isolation of Reactive Groups on DNA-Minimal Architectures. Angew Chem Int Ed Engl. 2020 Jul 27;59(31):12900-12908. doi: 10.1002/anie.202001123. Epub 2020 May 26. PMID: 32277788.</p>
+        <p class="quote">[16] Idili A, Porchetta A, Amodio A, Vallée-Bélisle A, Ricci F. 
+        Controlling Hybridization Chain Reactions with pH. Nano Lett. 2015 Aug 12;15(8):5539-44. doi: 10.1021/acs.nanolett.5b02123. Epub 2015 Jul 22. PMID: 26177980.</p> 
+        <p class="quote">[17] Liu X, Mao D, Song Y, Zhu L, Isak AN, Lu C, Deng G, Chen F, Sun F, Yang Y, Zhu X, Tan W. Computer-aided design of reversible hybridization chain reaction (CAD-HCR) enables multiplexed single-cell spatial proteomics imaging. Sci Adv. 2022 Jan 14;8(2):eabk0133. doi: 10.1126/sciadv.abk0133. Epub 2022 Jan 14. PMID: 35030012; PMCID: PMC8759754.</p>
+        <p class="quote">[18] Zhang H, Ye S, Huang L, Fan S, Mao W, Hu Y, Yu Y, Fu F. An 
+        electrochemical biosensor for the detection of aflatoxin B1 based on the specific aptamer and HCR biological magnification. Anal Methods. 2022 Dec 22;15(1):99-108. doi: 10.1039/d2ay01682f. PMID: 36484245.</p>
+        <p class="quote">[19] Xu W, Tian J, Shao X, Zhu L, Huang K, Luo Y. A rapid and visual aptasensor for Lipopolysaccharides detection based on the bulb-like triplex 
+        turn-on switch coupled with HCR-HRP nanostructures. Biosens Bioelectron. 2017 Mar 15;89(Pt 2):795-801. doi: 10.1016/j.bios.2016.10.012. Epub 2016 Oct 5. PMID: 27816585.</p>
+        <p class="quote">[20] Cui L, Lu M, Li Y, Tang B, Zhang CY. A reusable ratiometric electrochemical biosensor on the basis of the binding of methylene blue to DNA with alternating AT base sequence for sensitive detection of adenosine. Biosens Bioelectron. 2018 Apr 15;102:87-93. doi: 10.1016/j.bios.2017.11.025. Epub 2017 Nov 
+        7. PMID: 29127900.</p>
+        <p class="quote">[21] Chen Y, Nagao R, Murayama K, Asanuma H. Orthogonal Amplification Circuits Composed of Acyclic Nucleic Acids Enable RNA Detection. J Am Chem 
+        Soc. 2022 Apr 6;144(13):5887-5892. doi: 10.1021/jacs.1c12659. Epub 2022 Mar 8. PMID: 35258290.</p>
+        <p class="quote">[22]Saisuk W, Suksamai C, Srisawat C, Yoksan S, Dharakul T. The 
+        helper oligonucleotides enable detection of folded single-stranded DNA by lateral flow immunoassay after HCR signal amplification. Talanta. 2022 Oct 1;248:123588. doi: 10.1016/j.talanta.2022.123588. Epub 2022 May 29. PMID: 35661000.</p>  
+      </div>
     </div>
   </div>
 </div>
+
+<script src="../static/dp.js"></script>
 
 
   </div>
