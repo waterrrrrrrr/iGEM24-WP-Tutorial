@@ -65,6 +65,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="../description/index.html">Description</a></li>
             <li><a class="dropdown-item" href="../engineering/index.html">Engineering</a></li>
+            <li><a class="dropdown-item" href="../experiment/index.html">Experiment</a></li>
             <li><a class="dropdown-item" href="../hardware/index.html">Hardware</a></li>
             <li><a class="dropdown-item" href="../implementation/index.html">Implementation</a></li>
             <li><a class="dropdown-item" href="../model/index.html">Model</a></li>
@@ -74,8 +75,16 @@
         </li>
 
         <!---- HUMAN PRACTICES ---->
-        <li class="nav-item">
-          <a class="nav-link" href="../human-practices/index.html">Human Practices</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Human Practices
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="../education/index.html">Education</a></li>
+            <li><a class="dropdown-item" href="../entrepreneurship/index.html">Entrepreneurship</a></li>
+            <li><a class="dropdown-item" href="../integrated-human-practice/index.html">Integrated Human Practice</a></li>
+            
+          </ul>
         </li>
 
       </ul>
@@ -89,7 +98,7 @@
       <div class="row h-100 align-items-center">
         <div class="col-lg-12">
           <h1 class="display-4 text-white mt-5 mb-2">Safety</h1>
-	        <p class="lead mb-5 text-white-50">Describe all the safety issues of your project.</p>
+	        <p class="lead mb-5 text-white-50">Describe how and why you chose your iGEM project.</p>
         </div>
       </div>
     </div>
@@ -100,47 +109,177 @@
   <div>
     
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Safety and Security Award</h4>
-      <p>Synthetic biology will need to be used safely and securely if local people are to solve local problems all around the world. The Safety and Security Committee is challenging teams to apply biological engineering approaches to manage risks associated with synthetic biology. Can you take the next step in incremental progress towards knowledge, understanding, and tools that will make the use of synthetic biology safer and more secure?</p>
-      <p>To compete for the Safety and Security award, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2023 Awards Page</a> for more information.</p>
+<!-- CSS -->
+<link href="../static/cont-page.css" rel="stylesheet">
+
+<!-- Main Part -->
+<a name="top"></a>
+
+<div class="cont-title-box">
+  <!-- <div class="cont-title-word">Safety</div> -->
+  <img src="../static/svgs/safety.png" alt="content's title" class="cont-title-pic">
+</div>
+
+<div class="back-box">
+  <a href="#top">
+    <img src="../static/svgs/back2top.svg" alt=" " class="back2top">
+  </a>
+</div>
+
+<div class="pagebody">
+  <div class="menubox">
+    <div class="title0">Safety</div>
+    <div class="title1"><a href="#p1">- Risk Prediction</a></div>
+      <div class="title2"><a href="#p1-1">Reagent use and experimental operation</a></div>
+      <div class="title2"><a href="#p1-2">Product detection and application</a></div>
+
+    <div class="title1"><a href="#p2">- Management</a></div>
+      <div class="title2"><a href="#p2-1">Experimental Risk Avoidance</a></div>
+      <div class="title2"><a href="#p2-2">Safety and environmental design</a></div>
+      <div class="title2"><a href="#p2-3">Equipment and user risk management</a></div>
+    <div class="title1"><a href="#p3">- Reference</a></div>
+  </div>
+
+  <div class="contentbox">
+    <div class="part">
+      <div class="s1">
+        <a name="p1" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="../static/svgs/title_logo.svg" alt=" " class="titlelogo">
+          <div class="cont-h1">Risk Prediction</div>
+        </h2>
+        <p class="underh2">This year, we designed telepathy: a multi-sensor rapid detection kit for cardiac diseases, which means that we will use blood as the detection source and adopt the product design of the kit.</p>
+        <p class="underh2">Before starting the project, we consider safety from three aspects: experimental design, management, and deployment. Our project, as a cell-free system, effectively avoids some potential biological invasion and infection risks.</p>
+        <p class="underh2">However, the project still has certain risks. We analyze that the risks of our project mainly come from: 1) the reagents and experimental operations we use; 2) Product testing and application risks, etc.</p>
+        
+        <a name="p1-1" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="../static/svgs/subtitle_logo.svg" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Reagent use and experimental operation</div>
+        </h3>
+        <p class="underh3">We adopt the strategy of nucleic acid aptamer and HCR cascade signal amplification as the core principle of our detection, so we need to use some related reagents. Some of these reagents have certain human or environmental hazards, such as formaldehyde, 2- mercaptoethyl triethoxysilane and gold nanoparticles, so we must pay special attention to them.</p>
+
+        <a name="p1-2" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="../static/svgs/subtitle_logo.svg" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Product detection and application</div>
+        </h3>
+        <p class="underh3">Our project involves the application of human blood collection and treatment, so it is necessary to estimate <strong>the biosafety risks related to blood in particular</strong>.</p>
+        <p class="underh3">As far as we know, blood tests may cause pain, bleeding, infection and other effects on the body. In addition, improper blood treatment may produce toxic, harmful and infectious substances. If these substances are mixed with domestic garbage, it may pollute the air, water, land, animals and plants, cause the spread of diseases and directly endanger the health of residents.</p>
+        <p class="underh3">In addition to blood, we also designed an elution device to 
+        ensure the smoothness and recovery of our detection pathway. If the eluent is not handled properly, it may also cause the above-mentioned problems.</p>       
+        <p class="underh3">Therefore, we need to take safety measures to deal with the 
+        environmental and health impacts and other potential safety risks brought by the project.</p>
+        <p class="underh3">Because our products need to be stored at a low temperature 
+        (4℃), users need to put them in the refrigerator. If it is improperly sealed, it may <strong>pollute the food in the refrigerator</strong> and cause safety risks.</p>
+        <p class="underh3">In addition, because our test results will be sent to users 
+        through mobile phone software and stored in the cloud, we must consider <strong>the information security</strong> of users.</p>
+
+      </div>
+    </div>
+    
+    <div class="part">
+      <div class="s1">
+        <a name="p2" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="../static/svgs/title_logo.svg" alt=" " class="titlelogo">
+          <div class="cont-h1">Management</div>
+        </h2>
+
+        <a name="p2-1" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="../static/svgs/subtitle_logo.svg" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Experimental Risk Avoidance</div>
+        </h3>
+
+        <p class="underh3"><strong>Laboratory supervision and safety training</strong></p>
+        <p class="underh3">In order to reinforce the management of the labs, the official of our university delivered management regulations. All of our activities are instructed under the official guidance. Besides, our lab also special regulations on management of instruments and equipment, which we must obey during experiments.</p>
+        <p class="underh3">To gain access to our lab, we must apply on the lab website 
+        and take a test. The test included basic experiment skills, lab cleaning, experimental waste disposal, ethics, chemical reagents storage, lab rules, equipment safety, and emergency measures. Only those who pass the test are allowed to carry out experiments in our lab.</p>
+        <p class="underh3">Associate Professor Yang Fan is the instructor of our lab. She has been in charge of our lab for 8 years. She is familiar with most molecule cloning experiments and can offer suggestions at any time. So our experiment 
+        specification is under the control of the instructor in order to avoid any possible danger. Before we began our business in the lab, we also had a 'safety education class' delivered by her to train us the specific rules to follow in the 
+        lab and how to deal with the possible emergency. When we are carrying out our experiments, our instructor will supervise our experimental operations,decreasing the posibility of unnecessary danger and damages.</p>
+        <div class="inserteq">
+          <img src="../static/svgs/safety/1.png" style="width: 80%; background-color: white;" class="pic-decoration">
+        </div>
+        <div class="inserteq">
+          <img src="../static/svgs/safety/2.jpg" style="width: 80%; background-color: white;" class="pic-decoration">
+        </div>
+        <p class="underh3">Our laboratory has a dedicated lab instructor, who trains us on laboratory procedures, reviews our experimental plans, and ensures compliance with laboratory safety requirements. In addition, ourteam members are vigilant about the general biosafety standards of synthetic biology, consult literature to design more efficient safety modules, and regularly communicate with our 
+          mentor todiscuss and optimize product safety.</p>
+          <p class="underh3">Our work is carried out in strict accordance with the relevant laws and regulations and campus safety rules.</p>
+          <p class="underh3">Ministry of Education of the People's Republic of China has 
+          released the "Safety Regulations for Higher Education Laboratory" and distributed it to all higher education institutions.[1]</p>
+          <p class="underh3">At Zhejiang University, the Laboratory Equipment and Management Department is responsible for the supervision and safety management of all 
+          laboratories.[2]</p>
+
+        <p class="underh3"><strong>Safe operation of experiments</strong></p>
+        <p class="underh3">We handed over to the company to construct a nucleic acid library, and then transformed it into a thionucleic acid library using sulfhydrylated reagents, and then used formaldehyde-assisted phase separation (FCSP) to obtain the thionucleic acid aptamer we needed.</p>
+        <p class="underh3">Then, we used the obtained aptamers to construct the microarray chip for detection, the electrode material was gold electrode, and the thiolated nucleic acid chain was used for immobilization on the support plate to print the circuit diagrams using the desired conductive material as ink, and then encapsulated and assembled, and assembled into the hardware after separate preparations.</p>
+        <p class="underh3">During these processes, all our experimental operations were carried out under supervised conditions, with strict adherence to the relevant reagent usage guidelines and utmost care taken to prevent the risk of environmental dispersion (formaldehyde, etc.) and human inhalation. Disposal of experimental devices and waste is also organized according to laboratory norms.</p> 
+
+        <a name="p2-2" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="../static/svgs/subtitle_logo.svg" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Safety and environmental design</div>
+        </h3>
+        <p class="underh3">In order to prevent our assay nucleic acid aptamers and the 
+          nucleic acid sequences involved in HCR from posing a certain risk due to environmental exposure, we have designed the immobilization of our assay microarray chip in a certain way: mainly by means of sulfhydrylated nucleic acid chains. After iterative optimization, we used a more stable Au-Se bond instead, thus minimizing the risk of nucleic acid shedding and exposure.</p>
+          <p class="underh3">In addition, we follow environmentally friendly principles in the overall design of our products, such as using biodegradable PLA plastic as our encapsulation material to minimize the environmental hazards of production and disposal.</p>
+          
+        <a name="p2-3" style="position: relative; top: -12vh;"></a>
+        <h3>
+          <img src="../static/svgs/subtitle_logo.svg" alt=" " class="subtitlelogo">
+          <div class="cont-h2">Equipment and user risk management</div>
+        </h3>
+        <p class="underh3"><strong>Equipment Safety</strong></p>
+        <p class="underh3">In order to minimize the risk of contact between users and the interior of our products, we have only the blood collection window open to the users and have modeled the volume of blood to be collected for testing. Moreover, we set an appropriate amount of blood collection through modeling and calculation, and at the same time allow users to clean and disinfect the blood collection window with disinfectants such as alcohol to minimize the risk of blood infection.</p>
+        <p class="underh3">This is despite our efforts, such as centralized recycling. 
+        However, there is still a certain possibility of improper handling or inadvertent leakage of blood or eluent. When misfortune occurs, thorough disinfection treatment should be carried out on the relevant places in time, such as ultraviolet lamp exposure, alcohol wiping, ventilation, etc., or use nucleic acid scavenger to remove nucleic acid.</p>
+        <p class="underh3">In order to prevent safety risks caused by excessively sharp edges of the product, we have done some wrapping treatment.</p>
+        <p class="underh3">Finally, we have designed detailed instructions for the use 
+        and maintenance of our products based on the principles of safe testing and the risks mentioned above to guide the user in minimizing safety risks.</p> 
+
+        <p class="underh3"><strong>non-traditional security</strong></p>
+        <p class="underh3">Our project uses the cloud to store the user's test results 
+        involves the user's health privacy.</p>
+        <p class="underh3">To solve the above problems, we designed a system based on the combination of full-homomorphic encryption algorithm and AES algorithm to realize the storage, management, retrieval and calculation of medical data related to the kit.</p>
+        <p class="underh3">The data retrieval calculation method based on full-homomorphic encryption technology can directly perform basic calculation on the encrypted data without decrypting it into plain text, which not only ensures the security of user data, but also ensures that the server can directly operate the stored data ciphertext, balancing the relationship between ensuring the security of user data in the cloud storage system and serving cloud computing. The combination of AES encryption algorithm also effectively makes up for the low encryption rate of all homomorphic encryption algorithm</p>
+        <div class="inserteq">
+          <img src="../static/svgs/safety/2.png" style="width: 80%; background-color: white;" class="pic-decoration">
+        </div>
+        <div class="inserteq">
+          <img src="../static/svgs/safety/3.png" style="width: 80%; background-color: white;" class="pic-decoration">
+        </div>
+        <div class="inserteq">
+          <img src="../static/svgs/safety/4.png" style="width: 100%; background-color: white;" class="pic-decoration">
+        </div>
+
+        <p class="underh3"><strong>Our Challenge</strong></p>
+        <p class="underh3">Since the user's usage is a complex and unknown situation for us, the risk protection setting of our equipment needs to be a trade-off between the user's usage and the security risk level. We need to be able to adapt to the majority of use cases while taking into account the principle of simplicity in product design.</p>
+        <p class="underh3">The risk profile of the users of our devices, a key part of 
+        our program, determines whether our program is worthwhile for the majority of the population, and for this part of the safety considerations, we need to be more rigorous in our design and to obtain more supportive experimental data through testing.</p>
+        <p class="underh3">Ideally, our equipment should be able to pass the inspection of the relevant national government departments, which is something we still need to continue to optimize.</p>
+
+      </div>
+    </div>
+  
+    <div class="part">
+      <div class="s1">
+        <a name="p4" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="../static/svgs/title_logo.svg" alt=" " class="titlelogo">
+          <div class="cont-h1">Reference</div>
+        </h2>
+        <p class="quote">[1] http://www.moe.gov.cn/srcsite/A16/moe_784/202302/t20230220_1045998.html</p>
+        <p class="quote">[2] http://zjulab.zju.edu.cn/39425/list.htm</p>
+      </div>
     </div>
   </div>
 </div>
 
-<div class="row mt-4">
-  <div class="col">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <p>On this page of your wiki, you should write about how you are addressing any safety issues in your project. The wiki is a place where you can go beyond the questions on the safety forms, and write about whatever safety topics are most interesting in your project. (You do not need to copy your safety forms onto this wiki page.)</p>
-    <div class="bd-callout bd-callout-info">
-      <p>Please visit the <a href="https://responsibility.igem.org/safety-policies/introduction">Safety Policies page</a> to find this year's safety requirements & deadlines, and to learn about safe & responsible research in iGEM.</p>
-    </div>
-  </div>
-</div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Safe Project Design</h2>
-    <hr>
-    <p>Does your project include any safety features? Have you made certain decisions about the design to reduce risks? Write about them here! For example:</p>
-    <ul>
-      <li>Choosing a non-pathogenic chassis</li>
-      <li>Choosing parts that will not harm humans / animals / plants</li>
-      <li>Substituting safer materials for dangerous materials in a proof-of-concept experiment</li>
-      <li>Including an "induced lethality" or "kill-switch" device</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Safe Lab Work</h2>
-    <hr>
-    <p>What safety procedures do you use every day in the lab? Did you perform any unusual experiments, or face any unusual safety issues? Write about them here!</p>
-  </div>
-</div>
+<script src="../static/dp.js"></script>
 
 
   </div>
