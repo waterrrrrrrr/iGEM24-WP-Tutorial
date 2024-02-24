@@ -37,20 +37,38 @@
     /* background-color: antiquewhite; */
     margin-left: 7vw;
     /* top: -5vh; */
-    padding: 1vh 0 1vh 0;
+    padding: 1vh 10px 1vh 0;
     width: 18vw;
     /* position: relative; */
     position: sticky;
     top: 14vh;
+    overflow-y: scroll;
+    height: 80vh;
 }
-.menubox_pos {
+/* 隐藏滚动条的轨道 */
+.menubox::-webkit-scrollbar {
+    width: 7px; /* 设置滚动条宽度 */
+}
+
+/* 定制滚动条轨道 */
+.menubox::-webkit-scrollbar-track {
+    background: transparent; /* 轨道背景色 */
+}
+
+/* 定制滚动条滑块 */
+.menubox::-webkit-scrollbar-thumb {
+    background: #8A8A8A; /* 滑块颜色 */
+    border-radius: 5px;
+}
+
+
+/* .menubox_pos {
     position: fixed;
     z-index: 3;
     top: 14vh;
+    overflow-y: auto;
     overflow-x: hidden;
-    /* display: flex;
-    flex-direction: column; */
-}
+} */
 .title0{
     margin-bottom: 10%;
     font-family: 'Courier New', Courier, monospace;
@@ -120,10 +138,12 @@
 .insertimgnew img{
     height: 100%;
 }
+
 .codebox {
     border-radius: 29px;
     background: #7a8085;
-    border: 2rem 2rem 2rem 2rem;
+    margin-left: 1rem;
+    padding: 1rem 1.5rem 0.8rem 0;
 }
 
 strong{
