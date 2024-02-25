@@ -1,0 +1,388 @@
+{% extends "layout.html" %}
+  
+{% block title %}Experiment{% endblock %}
+<!-- {% block lead %}Describe how and why you chose your iGEM project.{% endblock %} -->
+
+{% block page_content %}
+
+<!-- CSS -->
+<link href="{{ url_for('static', filename = 'cont-page.css')}}" rel="stylesheet">
+<style>
+ table {
+      width: 100%;
+      border-collapse: collapse;
+  }
+  th, td {
+      padding: 8px;
+      text-align: left;
+  }
+  .selfmade-table{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0 1rem 0;
+}
+</style>
+<!-- Main Part -->
+<a name="top"></a>
+
+<div class="cont-title-box">
+  <!-- <div class="cont-title-word">{{ self.title() }}</div> -->
+  <img src="{{ url_for('static', filename = 'svgs/exp.png')}}" alt="content's title" class="cont-title-pic">
+</div>
+
+<div class="back-box">
+  <a href="#top">
+    <img src="{{ url_for('static', filename = 'svgs/back2top.svg')}}" alt=" " class="back2top">
+  </a>
+</div>
+
+<div class="pagebody">
+  <div class="menubox">
+    <div class="title0">{{ self.title() }}</div>
+    <div class="title1"><a href="#p1">- Orthogonality Verification Experiment Design</a></div>
+    <div class="title1"><a href="#p2">- Target Capture Sensitivity Experiment Design</a></div>
+    <!-- <div class="title2"><a href="#p2-1">Available Function</a></div>
+    <div class="title2"><a href="#p2-2">Key Features</a></div>
+    <div class="title2"><a href="#p2-3">UI Elements</a></div>
+    <div class="title2"><a href="#p2-4">Data usage of the project</a></div>
+    <div class="title2"><a href="#p2-5">Outlook of the web app</a></div> -->
+    <div class="title1"><a href="#p3">- Electricity Generation Level Experiment Design - HCR Parameters & Array Testing</a></div>
+      <!-- <div class="title2"><a href="#p3-1">Quick to Download</a></div>
+      <div class="title2"><a href="#p3-2">User-friendly UI design</a></div>
+      <div class="title2"><a href="#p3-3">Privacy concern</a></div> -->
+    <div class="title1"><a href="#p4">- Biosafety Experiment Design</a></div>
+
+  </div>
+
+  <div class="contentbox">
+    <div class="part">
+      <div class="s1">
+
+        <a name="p1" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">Orthogonality Verification Experiment Design</div>
+        </h2>
+        <p class="underh2">Orthogonality: Compatibility between hairpin DNAs corresponding to different targets → Co-incubation to observe the operation of the system</p>
+        
+        <a name="p1-1" style="position: relative; top: -12vh;"></a>
+        <h3>
+            <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+            <div class="cont-h2">RNA: Observed using gel electrophoresis</div>
+        </h3>
+
+        <div class="selfmade-table">
+            <!-- <div class="img_descr">RNA: Observed using gel electrophoresis</div> -->
+            <table border="1">
+                <colgroup>
+                    <col style="background-color: #85a38f;"> <!-- 第一列背景色为灰色 -->
+                </colgroup> 
+                <thead>
+                <tr style="background-color: #85a38f;">
+                    <th>lane</th>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                    <th>4</th>
+                    <th>5</th>
+                    <th>6</th>
+                    <th>7</th>
+                    <th>8</th>
+                    <th>9</th>
+                    <th>10</th>
+                    <th>11</th>
+                    <th>12</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>marker</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>target</td>
+                    <td>-</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>other sample</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>+</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>H1</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>H1’</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>H2/H3</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>H2’/H3’</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>+</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>pH</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>+</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="underh3">*Marker: Mark the positions corresponding to different base pairs (bp); H1: Hairpin DNA responsive to the target; H1’: Hairpin responsive to other targets; H2/H3: HCR hairpin DNA responsive to the target; H2’/H3’: Other HCR hairpins; pH: "+" indicates alkaline conditions, "-" indicates acidic conditions</p>
+        <p class="underh3">In the table, +/- indicates whether the substance is added. The occurrence of HCR is determined by comparing band positions: HCR response generates high molecular weight bands.</p>
+        <p class="underh3">Taking a single target for a single test as an example, lanes 2-5 confirm the positions of the target, H1, H2, H3 respectively.</p>    
+        <p class="underh3">In theory, HCR response bands should only appear when the target, H1, H2, H3, and alkaline pH conditions are present, but pH response leaks cannot be ruled out.</p>
+        <p class="underh3">Orthogonality testing is completed by adding other targets and their H2/H3. Band positions and intensities are observed to determine:</p>
+        <p class="underh3">1. Whether there are abnormal HCR activations under conditions not meeting the above conditions.</p>
+        <p class="underh3">2. Whether lane 12 shows unexpected activation of H1 relative to lane 10.</p>
+          
+        <a name="p1-2" style="position: relative; top: -12vh;"></a>
+        <h3>
+            <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+            <div class="cont-h2">
+                Protein detection: ELISA method</div>
+        </h3>
+        <p class="underh3">★ Follows the same design principles as RNA, excluding the pH 
+        response comparison group.</p>
+        <p class="underh3">★ ELISA is used instead of gel electrophoresis.</p>
+        <p class="underh3">★ HRP is attached to the corresponding target using biotin-streptavidin affinity interaction (1).</p>
+        <div class="inserteq">
+            <img src="{{ url_for('static', filename = 'svgs/exp/1.png')}}" style="width: 100%; background-color: white;" class="pic-decoration">
+            <div class="img_descr">(1)Xing KY, Peng J, Shan S, Liu DF, Huang YN, Lai WH. Green Enzyme-Linked Immunosorbent Assay Based on the Single-Stranded Binding Protein-Assisted Aptamer for the Detection of Mycotoxin. Anal Chem. 2020 Jun 16;92(12):8422-8426</div>
+        </div>
+      
+        </div>
+    </div>
+    
+    <div class="part">
+      <div class="s1">
+        <a name="p2" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">Target Capture Sensitivity Experiment Design</div>
+        </h2>
+
+        <a name="p2-1" style="position: relative; top: -12vh;"></a>
+        <h3>
+            <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+            <div class="cont-h2">
+                Sensitivity Verification For MiRNA Binding:</div>
+        </h3>
+        
+        <p class="underh3">Different concentrations of target RNA molecules are added with constant quantity of hairpin DNA for HCR and the probe hairpin under activated 
+        and inactive condition, and the size of HCR products will change according to the amount of targets. By comparing the concentration of targets when HCR starts and the size and shade of HCR bands, we can confirm how the reaction carries out and determine the sensitivity of target capture. Probe stability can be increased by adjusting the lengths of stem and toe domains.</p>
+        <p class="underh3">The detection limit of target binding is determined by combining gel electrophoresis analysis and LFIA (Lateral Flow Immunoassay).</p>
+        <div class="inserteq">
+            <img src="{{ url_for('static', filename = 'svgs/exp/2.png')}}" style="width: 60%; background-color: white;" class="pic-decoration">
+            <!-- <div class="img_descr">(1)Xing KY, Peng J, Shan S, Liu DF, Huang YN, Lai WH. Green Enzyme-Linked Immunosorbent Assay Based on the Single-Stranded Binding Protein-Assisted Aptamer for the Detection of Mycotoxin. Anal Chem. 2020 Jun 16;92(12):8422-8426</div> -->
+        </div>
+        <div class="inserteq">
+            <img src="{{ url_for('static', filename = 'svgs/exp/3.png')}}" style="width: 60%; background-color: white;" class="pic-decoration">
+            <!-- <div class="img_descr">(1)Xing KY, Peng J, Shan S, Liu DF, Huang YN, Lai WH. Green Enzyme-Linked Immunosorbent Assay Based on the Single-Stranded Binding Protein-Assisted Aptamer for the Detection of Mycotoxin. Anal Chem. 2020 Jun 16;92(12):8422-8426</div> -->
+        </div>
+
+        <a name="p2-2" style="position: relative; top: -12vh;"></a>
+        <h3>
+            <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+            <div class="cont-h2">
+                Sensitivity Verification For Protein Binding:</div>
+        </h3>
+        <p class="underh3">BioProtoType is a versatile statistical computing tool that integrates methods such as data visualization and hypothesis testing. The software utilizes clinical statistical methods to provide accurate and insightful visualizations to validate the usability of the wet laboratory product Telepathy Kit. At the same time, the software retains more room for future development (such as linked database, K8S deployment, sequencing, etc.).</p>
+        <div class="inserteq">
+            <img src="{{ url_for('static', filename = 'svgs/exp/4.png')}}" style="width: 40%; background-color: white;" class="pic-decoration">
+            <!-- <div class="img_descr">(1)Xing KY, Peng J, Shan S, Liu DF, Huang YN, Lai WH. Green Enzyme-Linked Immunosorbent Assay Based on the Single-Stranded Binding Protein-Assisted Aptamer for the Detection of Mycotoxin. Anal Chem. 2020 Jun 16;92(12):8422-8426</div> -->
+        </div>
+        <div class="inserteq">
+            <img src="{{ url_for('static', filename = 'svgs/exp/5.png')}}" style="width: 60%; background-color: white;" class="pic-decoration">
+            <!-- <div class="img_descr">(1)Xing KY, Peng J, Shan S, Liu DF, Huang YN, Lai WH. Green Enzyme-Linked Immunosorbent Assay Based on the Single-Stranded Binding Protein-Assisted Aptamer for the Detection of Mycotoxin. Anal Chem. 2020 Jun 16;92(12):8422-8426</div> -->
+        </div>
+
+      </div>
+    </div>
+  
+    <div class="part">
+      <div class="s1">
+        <a name="p3" style="position: relative; top: -14vh;"></a>
+        <h2>
+          <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+          <div class="cont-h1">Electricity Generation Level Experiment Design - HCR Parameters & Array Testing</div>
+        </h2>
+
+        <a name="p3-1" style="position: relative; top: -12vh;"></a>
+        <h3>
+            <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+            <div class="cont-h2">
+                We utilize methylene blue (MB) as the electroactive substance.</div>
+        </h3>
+        <p class="underh3">The principle involves pipetting a mixture of MB, samples, and hairpin DNA onto a gold electrode and incubating as required (changing concentrations, pH, and temperature conditions in HCR parameter determination), followed by measuring the intensity of electricity.</p>
+        <p class="underh3">This setup allows for the investigation of the effects of various parameters on the electricity generation level, providing insights into the optimization of the HCR process for enhanced electrical output.</p>
+        <div class="inserteq">
+            <img src="{{ url_for('static', filename = 'svgs/exp/6.png')}}" style="width: 80%; background-color: white;" class="pic-decoration">
+            <!-- <div class="img_descr">(1)Xing KY, Peng J, Shan S, Liu DF, Huang YN, Lai WH. Green Enzyme-Linked Immunosorbent Assay Based on the Single-Stranded Binding Protein-Assisted Aptamer for the Detection of Mycotoxin. Anal Chem. 2020 Jun 16;92(12):8422-8426</div> -->
+        </div>
+
+        <a name="p3-2" style="position: relative; top: -12vh;"></a>
+        <h3>
+            <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+            <div class="cont-h2">
+                We use an electrochemical workstation as the electrochemical detection instrument.</div>
+        </h3>
+        <p class="underh3">The experimental process involves comparing the electrical intensity of the modified electrode before and after incubation with the mixture (testing electrodes with different reaction durations in HCR parameter determination). This process allows us to determine the electricity generation level of our designed method, and the parameters obtained can be used for modeling references.</p>
+        <div class="inserteq">
+            <img src="{{ url_for('static', filename = 'svgs/exp/7.png')}}" style="width: 80%; background-color: white;" class="pic-decoration">
+            <!-- <div class="img_descr">(1)Xing KY, Peng J, Shan S, Liu DF, Huang YN, Lai WH. Green Enzyme-Linked Immunosorbent Assay Based on the Single-Stranded Binding Protein-Assisted Aptamer for the Detection of Mycotoxin. Anal Chem. 2020 Jun 16;92(12):8422-8426</div> -->
+        </div>
+    
+      </div>
+    </div>
+
+    <div class="part">
+        <div class="s1">
+          <a name="p4" style="position: relative; top: -14vh;"></a>
+          <h2>
+            <img src="{{ url_for('static', filename = 'svgs/title_logo.svg')}}" alt=" " class="titlelogo">
+            <div class="cont-h1">Biosafety Experiment Design</div>
+          </h2>
+  
+          <a name="p3-1" style="position: relative; top: -12vh;"></a>
+          <h3>
+              <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+              <div class="cont-h2">
+                Risk of Nucleic Acid Leakage</div>
+          </h3>
+          <p class="underh3">We will utilize environmental DNA detection technology to assess the nucleic acid leakage of our product under various usage conditions, thereby evaluating associated risks.</p>
+          <p class="underh3">Multiple Scenarios:
+            <ul>
+                <li>Storage in a 4°C refrigerator</li>
+                <li>Brief placement at room temperature (20°C)</li>
+                <li>Long-term storage at room temperature</li>
+              </ul>
+        </p>
+        <p class="underh3">eDNA Detection Process:
+            <ul>
+                <li>Storage in a 4°C refrigerator</li>
+                <li>Brief placement at room temperature (20°C)</li>
+                <li>Long-term storage at room temperature</li>
+              </ul>
+        </p>
+          <div class="inserteq">
+              <img src="{{ url_for('static', filename = 'svgs/exp/8.png')}}" style="width: 80%; background-color: white;" class="pic-decoration">
+              <!-- <div class="img_descr">(1)Xing KY, Peng J, Shan S, Liu DF, Huang YN, Lai WH. Green Enzyme-Linked Immunosorbent Assay Based on the Single-Stranded Binding Protein-Assisted Aptamer for the Detection of Mycotoxin. Anal Chem. 2020 Jun 16;92(12):8422-8426</div> -->
+          </div>
+  
+          <a name="p3-2" style="position: relative; top: -12vh;"></a>
+          <h3>
+              <img src="{{ url_for('static', filename = 'svgs/subtitle_logo.svg')}}" alt=" " class="subtitlelogo">
+              <div class="cont-h2">
+                Handling Liquid Hazards and Recovery</div>
+          </h3>
+          <p class="underh3">1. Hazard Validation</p>
+<p class="underh3">Considering the storage and usage scenarios of our product, 
+we will assess the hazards of the handling liquid from three aspects: food, water quality, and skin contact.</p>
+<p class="underh3">For hazard validation related to food and skin contact (mouse experiments), a simple control experiment design will be used. For water quality hazard experiments, a gradient experiment method will be employed, with water quality parameters (pH, dissolved oxygen, conductivity, turbidity, temperature) serving as monitoring indicators.</p>
+<p class="underh3">2. Recovery and Disposal</p>
+<p class="underh3">Considering existing nucleic acid waste liquid treatment methods, when the volume of waste liquid is low, traditional filtration and separation methods will be employed, followed by chemical precipitation and solid-liquid separation treatment（Coagulation-SBR）. When the volume of waste liquid is high, it will be handed over to waste liquid treatment companies or instrument disposal services.</p>
+
+      
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<script src="{{ url_for('static', filename = 'dp.js') }}"></script>
+
+{% endblock %}
