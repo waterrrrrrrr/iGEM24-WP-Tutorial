@@ -183,6 +183,15 @@ li {
     box-shadow:  20px 20px 60px #1A1E27;
 }
 
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
 
 .equation-box{
     display: flex; 
